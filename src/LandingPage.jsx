@@ -32,7 +32,7 @@ const LandingPage = () => {
                 <div> <span className={styles.ovals}> 🏆 Best Company Management </span></div>
                 <div className={styles.moto1}>
                     <span>Make Company</span>
-                    <span>Management <span style={{color:'#EA5254'}} >Effortless</span></span>
+                    <span>Resource Management <span style={{color:'#EA5254'}} >Effortless</span></span>
                 </div>
                 <div  className={styles.moto2} >Simplify Operations, Amplify Growth</div>
                 <div> <button className={styles.registerBtn} >Sign up for free ➡ </button> </div>
@@ -40,12 +40,12 @@ const LandingPage = () => {
                     <span className={styles.ovals}>💰 Finance</span>
                     <span className={styles.ovals}>👩 Employee</span>
                     <span className={styles.ovals}>📁 Projects</span>
-                    <span className={styles.ovals}>📆 Schedule</span> 
+                    <span className={styles.ovals}>📆 Schedule</span>
                 </div>
             </div>
 
             <div className={styles.dashboard}>
-                <img src={dashboard} width={'1246px'} />
+                <img src={dashboard} width={'100%'} />
             </div>
 
             <div className={styles.servicesContainer}>
