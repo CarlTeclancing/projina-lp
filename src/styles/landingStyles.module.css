@@ -146,3 +146,111 @@
     font-weight: 600;
     color: black;
 }
+
+
+.section1{
+    /* border:solid 1px red; */
+    width:fit-content;
+    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    max-width: 900px;
+}
+h1 ,h3 ,h4 ,h5 ,h6{
+    color: black
+}
+
+.section1Image{
+    width: 900px;
+    height:350px;
+    border-radius: 10px;
+    margin:auto;
+}
+
+.section1Block{
+    background-color: white;
+    width: 900px;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgb(200,200,200);
+}
+
+
+.section2{
+    width:fit-content;
+    margin:50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    max-width: 900px;   
+}
+
+.section2Block{
+    background-color: white;
+    padding:5px;
+    border-radius: 10px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap:5px; */
+    margin: 5px;
+    width: 270px;
+    height: 200px;
+    display: inline-block;
+}
+
+.tabContainer{
+    display: flex;
+    margin: auto;
+    width:fit-content
+}
+.tabBtn ,.tabBtnActive{
+    cursor: pointer;
+    padding:5px 20px;
+    width: 240px;
+    text-align: center;
+    /* height: 40px; */
+    border-bottom: solid 1px rgb(200,200,200);
+}
+
+.tabBtnActive{
+    color: black;
+    border-bottom: solid 1px black;
+
+}
+.tabImage{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    /* border: solid 1px red; */
+
+}
+.tabContent{
+    display: flex;
+    align-items: center;
+    /* border: solid 1px red; */
+    width: fit-content;
+    margin:20px auto;
+    gap:30px;
+}
+
+.tabText{
+   /* font-size: 30px; */
+   font-weight: x-large;
+   font-weight: 600;
+   color: black; 
+}
+
+.trySection{
+    margin:30px auto;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: fit-content;
+}
