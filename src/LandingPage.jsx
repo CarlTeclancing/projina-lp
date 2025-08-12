@@ -2,7 +2,6 @@ import React ,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles/landingStyles.module.css'
 
-import icon from './assets/Icon.png'
 import dashboard from './assets/dashboard.png'
 import star1 from './assets/star1.png'
 import star2 from './assets/star2.png'
@@ -11,6 +10,8 @@ import working from './assets/working.png'
 import sec1Img from './assets/sec1-img.jpg'
 import sec2Img from './assets/sec2-img.jpg'
 import slider1 from './assets/slider1.jpg'
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 
 const LandingPage = () => {
@@ -25,26 +26,7 @@ const LandingPage = () => {
             <img src={star3} style={{position:'absolute' ,top:'649px' ,left:'126px'}}/>
 
 
-            <div className={styles.header}>
-                <div className={styles.logo}> 
-                    <img src={icon} alt='logo' width={'40px'} height={'40px'} />
-                    Pro<b>jina</b>
-                </div>
-
-                <div className={styles.headerLinks}>
-                    <span>Home</span>
-                    <span>Product</span>
-                    <span>Solutions</span>
-                    <span>Pricing</span>
-                    <span>Projina for startups</span>
-                </div>
-
-                <div className={styles.headerBtns}>
-                    <button className={styles.loginBtn}>Login</button>
-                    <button className={styles.registerBtn}>Sign up for free</button>
-                </div>
-
-            </div>
+            {/* <Header/> */}
 
             <div className={styles.desc}>
                 <div> <span className={styles.ovals}> 🏆 Best Company Management </span></div>
@@ -176,6 +158,9 @@ const LandingPage = () => {
                 </div>
 
                 {/* Video section */}
+                <div>
+                    <video src="" type="video/mp4" controls width={900} height={450} style={{backgroundColor:'rgb(200,200,200)' ,borderRadius:10 ,margin:'40px 0px'}} />
+                </div>
 
             </div>
 
@@ -236,6 +221,7 @@ const LandingPage = () => {
                 
             </div>
                         
+            {/* <Footer/> */}
 
         </React.Fragment>
     )
