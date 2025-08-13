@@ -1,21 +1,21 @@
 import React from 'react'
-import { useNavigate ,Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from '../styles/landingStyles.module.css'
+import '../styles/headerStyles.css'
+
 import icon from '../assets/Icon.png'
 
 const Header =() =>{
 
-    const navigate = useNavigate()
-
     return(
         <React.Fragment> 
-            <div className={styles.header}>
-                <div className={styles.logo}> 
+            <div className='header'>
+                <div className='logo'> 
                     <img src={icon} alt='logo' width={'40px'} height={'40px'} />
                     Pro<b>jina</b>
                 </div>
 
-                <div className={styles.headerLinks}>
+                <div className={'headerLinks'}>
                     <span><Link to={'/home'} > Home </Link></span>
                     <span> <Link to={'/product'}> Product </Link></span>
                     <span><Link to={'/solutions'}> Solutions </Link></span>
@@ -23,7 +23,7 @@ const Header =() =>{
                     <span><Link to={'/start-ups'}> Projina for startups </Link></span>
                 </div>
 
-                <div className={styles.headerBtns}>
+                <div className={'headerBtns'}>
                     <a href='https://app.projina/auth/login' >
                         <button className={styles.loginBtn} >Login</button>
                     </a>

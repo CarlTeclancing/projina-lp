@@ -10,9 +10,7 @@ import working from './assets/working.png'
 import sec1Img from './assets/sec1-img.jpg'
 import sec2Img from './assets/sec2-img.jpg'
 import slider1 from './assets/slider1.jpg'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
-
+import arrowBack from './assets/arrow-back.png'
 
 const LandingPage = () => {
     
@@ -35,7 +33,7 @@ const LandingPage = () => {
                     <span>Management <span style={{color:'#EA5254'}} >Effortless</span></span>
                 </div>
                 <div  className={styles.moto2} >Simplify Operations, Amplify Growth</div>
-                <div> <button className={styles.registerBtn} >Sign up for free ➡ </button> </div>
+                <div> <button className={styles.registerBtn} >Sign up for free <img src={arrowBack} /> </button> </div>
                 <div className={styles.reasons} > 
                     <span className={styles.ovals}>💰 Finance</span>
                     <span className={styles.ovals}>👩 Employee</span>
@@ -191,7 +189,7 @@ const LandingPage = () => {
                             <>
                                 <p className={styles.tabText} >"I no longer waste time juggling spreadsheets and chasing updates everything from finances to schedules runs smoothly."</p>
                                 <span style={{fontSize:'small'}}>Grace N. – Operations Manager, BrightPath Solutions</span><br/><br/>
-                                <button style={{color:'white' ,backgroundColor:'#5B0C4E'}}>Read study case</button>
+                                <button className={styles.registerBtn}>Read study case <img src={arrowBack} /> </button>
                             </>
                             :
                             <>
