@@ -1,0 +1,78 @@
+.pricing-bg{
+    background-color: white;
+    background-position: top;
+
+    background-image: url('../assets/pricingBg.png');
+}
+
+.pricing-container{
+    width: fit-content;
+    margin: auto;
+    padding:100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    gap:100px;
+}
+
+.pricing-header{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+.pricing-title{
+    font-size: 60px;
+    font-weight: 600;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    align-items: first baseline;
+}
+.price span:first-child{
+    font-size: 40px;
+    font-weight: 600;
+    color: #5B0C4E;
+}
+.price span:last-child{
+    font-size: small;
+}
+b{
+    color: black;
+}
+
+.pricings{
+    display: flex;
+    gap:20px;
+}
+
+.pricing-block{
+    border: solid 1px rgb(200,200,200);
+    background-color: rgb(250,250,250);
+    border-radius: 10px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.growth-block{
+    border: solid 1px #5B0C4E;
+}
+.btn{
+    border:solid 1px rgb(150,150,150);
+    background-color: white;
+}
+.btn-color{
+    background-color:#5B0C4E;
+    color: white;
+}
+
+ul{
+    list-style-image: url('../assets//circleCheck.png');
+    line-height: 200%;
+}

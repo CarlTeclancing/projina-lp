@@ -1,14 +1,31 @@
 import React from "react";
 import '../styles/footerStyles.css'
+import styles from '../styles/landingStyles.module.css'
 
 import iconWhite from '../assets/icon-white.png'
 import facebook from '../assets/facebook.png'
 import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'
+import dashboard from '../assets/dashboard.png'
 
 const Footer = () =>{
     return(
         <React.Fragment>
+
+            <div className={styles.trySection}>
+                <h1>Try us for <span style={{color:'#EA5254'}}>Free</span></h1>
+            
+                <div style={{display:'flex' ,gap:20}}>
+                    <button style={{border:'solid 1px rgb(175,175,175)'}}>Contact Sales</button>
+                    <button style={{color:'white' ,backgroundColor:'#5B0C4E'}} >Sign up for free</button>
+                </div>
+            </div>
+
+            <div className={styles.dashboard} style={{height:350}}>
+                <img src={dashboard} width={'1246px'}  />
+            </div>
+
+
             <div className="footer">
                 
                 <div className="footer-container">
@@ -17,7 +34,7 @@ const Footer = () =>{
                             <img src={iconWhite} width={'42px'} height={'42px'} /> 
                             <span className="footer-company"> Pro<b>jina</b> </span>  
                         </span>
-                        <span> One Platform. Every Tool You Need. Projina helps you manage better, work faster, and scale smarter — with tools for finance, employee management, projects, and schedules, built for modern businesses. </span>
+                        <span> One Platform. Every Tool You Need. Projina helps you manage better, work faster, and scale smarter — with tools for finance, employee management, projects, and schedules, built for modern businesses. </span>
                         <span className='social'>
                             <img src={linkedin}  width={35} height={35} alt="linkedin" />
                             <img src={facebook} width={35} height={35} alt="facebook" />

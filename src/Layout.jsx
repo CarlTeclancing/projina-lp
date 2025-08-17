@@ -9,7 +9,7 @@ const Layout = () => {
             <Header/>    
                 <Outlet/>
             <Footer/>
-            <Navigate to={'/home'}/>
+            {/* <Navigate to={'/home'}/> */}
         </React.Fragment>
     )
 }

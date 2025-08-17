@@ -11,6 +11,7 @@ import sec1Img from './assets/sec1-img.jpg'
 import sec2Img from './assets/sec2-img.jpg'
 import slider1 from './assets/slider1.jpg'
 import arrowBack from './assets/arrow-back.png'
+import Services from './components/Services'
 
 const LandingPage = () => {
     
@@ -52,7 +53,7 @@ const LandingPage = () => {
                     <div style={{textAlign:'center'}} >With Projina, you manage better, work faster, and grow smarter using tools for finance, employees, projects,<br/> and schedules  all tailored for today’s businesses.</div>
                 </div>
 
-                <div className={styles.services}>
+                {/* <div className={styles.services}>
                     <div className={styles.service}>
                         <div><span className={styles.serviceIcon}>💰</span></div>
                         <div className={styles.serviceTitle}> Finance Management </div>
@@ -86,7 +87,8 @@ const LandingPage = () => {
                         <div className={styles.serviceTitle}> Resource & Inventory Tracking </div>
                         <div>Monitor assets, office supplies, and materials to ensure nothing falls through the cracks.</div>
                     </div>
-                </div>
+                </div> */}
+                <Services/>
 
             </div>
 
@@ -202,7 +204,7 @@ const LandingPage = () => {
 
             </div>
 
-            <div className={styles.trySection}>
+            {/* <div className={styles.trySection}>
                 <h1>Try us for <span style={{color:'#EA5254'}}>Free</span></h1>
             
                 <div style={{display:'flex' ,gap:20}}>
@@ -213,11 +215,8 @@ const LandingPage = () => {
 
             <div className={styles.dashboard} style={{height:350}}>
                 <img src={dashboard} width={'1246px'}  />
-            </div>
+            </div> */}
 
-            <div>
-                
-            </div>
                         
             {/* <Footer/> */}
 
