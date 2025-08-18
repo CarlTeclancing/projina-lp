@@ -5,6 +5,7 @@ import Layout from './Layout'
 import NotFound from './pages/404.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Solutions from './pages/Solutions.jsx'
+import About from './pages/About.jsx'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
           <Route path='/pricing' element={<Pricing/>} />
           <Route path='/solutions' element={<Solutions/>} />
+          <Route path='/about' element={<About/>}/>
 
         </Route>
         <Route path='*' element={<NotFound/>} />

@@ -21,7 +21,7 @@ const Header =() =>{
                     <span className={location.pathname == '/product' ? 'active-link':''}> <Link to={'/product'} > Product </Link></span>
                     <span className={location.pathname == '/solutions' ? 'active-link':''}><Link to={'/solutions'} > Solutions </Link></span>
                     <span className={location.pathname == '/pricing' ? 'active-link':''}><Link to={'/pricing'} > Pricing </Link></span>
-                    <span><Link to={'/start-ups'}> About & Testimonials </Link></span>
+                    <span className={location.pathname == '/about' ? 'active-link':''}><Link to={'/about'}> About & Testimonials </Link></span>
                 </div>
 
                 <div className={'headerBtns'}>

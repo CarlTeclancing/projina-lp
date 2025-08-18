@@ -42,34 +42,48 @@ const Footer = () =>{
                         </span>
                     </div>
 
-                    <div className="footer-block">
-                        <span className="footer-block-title">Quick Links</span>
-                            Home <br/>
-                            Features <br/>
-                            Plan & Pricing
+                    <div style={{display:'flex' ,flexDirection:'column'}} >
+                        <div className="footer-container-sub1">
+                            <div className="footer-block">
+                                <span className="footer-block-title">Quick Links</span>
+                                    Home <br/>
+                                    Features <br/>
+                                    Plan & Pricing
+                            </div>
+
+                            <div className="footer-block">
+                                <span className="footer-block-title">Address:</span>
+                                <span className="footer-block-title" style={{lineHeight:'normal'}}>Projina company <br/> management system</span>
+                                
+                                Yaounde Cameroun<br/>
+                                Tel: (+237) 6xxxxxxxx
+                            </div>
+
+                            <div className="footer-block">
+                                <span className="footer-block-title">Resources</span>
+                                Help Center<br/>
+                                How it works<br/>
+                                Business
+                            </div>
+
+                            <div className="footer-block">
+                                <span className="footer-block-title">Company</span>
+                                About Us<br/>
+                                Contact Us<br/>
+                                Career
+                            </div>
+                        </div>
+
+                        <div style={{padding:20}}>
+                            <span className="footer-block-title">News Letter</span>
+                            <p>Stay updated with the latest Projina features, product upgrades, and useful resources <br/> no spam, ever. You can unsubscribe anytime.</p>
+                            <input type="text" className="input" placeholder="Enter your email address"/> &nbsp;&nbsp;&nbsp; <button>Subscribe</button>
+                        </div>
+
                     </div>
 
-                    <div className="footer-block">
-                        <span className="footer-block-title">Address:</span>
-                        <span className="footer-block-title" style={{lineHeight:'normal'}}>Projina company <br/> management system</span>
-                        
-                        Yaounde Cameroun<br/>
-                        Tel: (+237) 6xxxxxxxx
-                    </div>
 
-                    <div className="footer-block">
-                        <span className="footer-block-title">Resources</span>
-                        Help Center<br/>
-                        How it works<br/>
-                        Business
-                    </div>
 
-                    <div className="footer-block">
-                        <span className="footer-block-title">Company</span>
-                        About Us<br/>
-                        Contact Us<br/>
-                        Career
-                    </div>
                 </div>
 
                 <div className="footer-end">
