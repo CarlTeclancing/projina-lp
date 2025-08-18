@@ -4,6 +4,7 @@ import { BrowserRouter ,Routes ,Route  ,Navigate } from 'react-router-dom'
 import Layout from './Layout'
 import NotFound from './pages/404.jsx'
 import Pricing from './pages/Pricing.jsx'
+import Solutions from './pages/Solutions.jsx'
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
           <Route index path='/' element={<Navigate to={"/home"} />} />
 
           <Route path='/pricing' element={<Pricing/>} />
+          <Route path='/solutions' element={<Solutions/>} />
+
         </Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>

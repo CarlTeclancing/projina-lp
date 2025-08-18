@@ -32,3 +32,9 @@
     display: flex;
     gap: 20px;
 }
+
+.active-link a{
+    color: #5B0C4E;
+    text-shadow: 3px 3px 15px rgba(91, 12, 78 ,0.5);
+    /* font-weight: 600; */
+}

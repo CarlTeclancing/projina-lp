@@ -10,6 +10,8 @@ import working from './assets/working.png'
 import sec1Img from './assets/sec1-img.jpg'
 import sec2Img from './assets/sec2-img.jpg'
 import slider1 from './assets/slider1.jpg'
+import slider2 from './assets/slider2.jpg'
+
 import arrowBack from './assets/arrow-back.png'
 import Services from './components/Services'
 
@@ -183,7 +185,7 @@ const LandingPage = () => {
 
                 <div className={styles.tabContent}>
                     <div>
-                        <img src={activeBar == '1' ? slider1:working} className={styles.tabImage} style={{objectFit:'cover'}}/>
+                        <img src={activeBar == '1' ? slider1:slider2} className={styles.tabImage} style={{objectFit:'cover'}}/>
                     </div>
                     <div style={{width:350 ,fontSize:'large'}}>
                         {
@@ -195,7 +197,9 @@ const LandingPage = () => {
                             </>
                             :
                             <>
-                            <p className={styles.tabText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, cumque doloribus aliquam eum eaque dolorum cupiditate facilis consequuntur dolor ea? Voluptate ad quibusdam nesciunt atque voluptatum illo itaque odit saepe?</p>
+                            <p className={styles.tabText}>"With Projina handling our projects, and schedules, are way faster. It’s like having an extra operations team working 24/7."</p>
+                            <span style={{fontSize:'small'}}>Amanda K. – Founder, Apex Builders Ltd.</span><br/><br/>
+                                <button className={styles.registerBtn}>Read study case <img src={arrowBack} /> </button>
                             </>
                         }
                     </div>

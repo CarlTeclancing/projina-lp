@@ -32,7 +32,7 @@ const Footer = () =>{
                     <div className="footer-block first-block">
                         <span className="footer-block-title footer-logo" >
                             <img src={iconWhite} width={'42px'} height={'42px'} /> 
-                            <span className="footer-company"> Pro<b>jina</b> </span>  
+                            <span className="footer-company"> Pro<b style={{color:'white'}}>jina</b> </span>  
                         </span>
                         <span> One Platform. Every Tool You Need. Projina helps you manage better, work faster, and scale smarter — with tools for finance, employee management, projects, and schedules, built for modern businesses. </span>
                         <span className='social'>
