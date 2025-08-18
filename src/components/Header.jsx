@@ -4,9 +4,11 @@ import styles from '../styles/landingStyles.module.css'
 import '../styles/headerStyles.css'
 
 import icon from '../assets/Icon.png'
+import Product from '../pages/Product'
 
 const Header =() =>{
     const location = useLocation()
+    const [show, setShow] = useState(false)
 
     return(
         <React.Fragment> 
@@ -18,7 +20,12 @@ const Header =() =>{
   
                 <div className={'headerLinks'}> 
                     <span className={location.pathname == '/home' ? 'active-link':''} ><Link to={'/home'} > Home </Link></span>
-                    <span className={location.pathname == '/product' ? 'active-link':''}> <Link to={'/product'} > Product </Link></span>
+                    <span className={location.pathname == '/product' ? 'active-link':''} 
+                        onMouseOver={()=>{ setShow(true) }}
+                        onMouseLeave={()=>{}}
+                    > 
+                        <Link to={'#'} > Product </Link>
+                    </span>
                     <span className={location.pathname == '/solutions' ? 'active-link':''}><Link to={'/solutions'} > Solutions </Link></span>
                     <span className={location.pathname == '/pricing' ? 'active-link':''}><Link to={'/pricing'} > Pricing </Link></span>
                     <span className={location.pathname == '/about' ? 'active-link':''}><Link to={'/about'}> About & Testimonials </Link></span>
@@ -33,6 +40,12 @@ const Header =() =>{
                     </a>
                 </div>
 
+            </div>
+            <div 
+                className={show ?'show-product hide-product':'hide-product'}
+                onMouseLeave={()=>setShow(false)}
+            >
+                <Product/>
             </div>
         </React.Fragment>
     )

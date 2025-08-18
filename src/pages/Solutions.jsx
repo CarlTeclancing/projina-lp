@@ -131,7 +131,7 @@ const Solutions = () => {
 
                     <div className="faq-container">
                         {
-                            data.map((faq ,index) => <FaqItem data={faq} />)
+                            data.map((faq ,index) => <FaqItem key={index} data={faq} />)
                         }
                     </div>
 
