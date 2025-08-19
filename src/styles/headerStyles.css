@@ -64,3 +64,50 @@
 .show-product{
     max-height: 400px;
 }
+
+.mobile-login{
+    display: none;
+}
+.menu-bar{
+    display: none;
+}
+
+@media only screen and (max-width:500px) {
+    .header{
+        font-size: small;
+        width: 95%;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 20px;
+        font-weight: 600;
+        max-width: 130px;
+    }
+    .logo img{
+        width: 22px;
+        height: 22px;
+        margin-right: 3px;
+    }
+
+    .headerLinks{
+        display: none;
+    }
+
+    .headerBtns{
+        display: none;
+    }
+
+    .mobile-login{
+        display: block;
+        border: solid 1px #5B0C4E;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+    .menu-bar{
+        display: block;
+        font-size: x-large;
+    }
+
+}

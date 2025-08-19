@@ -72,6 +72,7 @@
     gap:25px;
     /* border: solid 1px red; */
     width: fit-content;
+    max-width: 900px;
     margin: auto;
     align-items: center;
     margin-top: 100px;
@@ -173,6 +174,7 @@ h1 ,h3 ,h4 ,h5 ,h6{
     background-color: white;
     padding:5px;
     border-radius: 10px;
+    border: solid 1px rgb(200,200,200);
     /* display: flex; */
     /* flex-direction: column; */
     /* gap:5px; */
@@ -180,6 +182,21 @@ h1 ,h3 ,h4 ,h5 ,h6{
     width: 270px;
     height: 200px;
     display: inline-block;
+}
+
+.section2Title{
+    text-align: center;  
+}
+.section2BlockContainer{
+    display: block;
+    gap: 10px;
+}
+.section2Video{
+    background-color: rgb(200,200,200);
+    border-radius: 10px;
+    margin: 40px 0px;
+    width: 900px;
+    height: 450px;
 }
 
 .tabContainer{
@@ -230,4 +247,181 @@ h1 ,h3 ,h4 ,h5 ,h6{
     flex-direction: column;
     gap:20px;
     width: fit-content;
+}
+
+
+.subBlocks{
+    display:flex;
+    justify-content:space-between ;
+    gap:20px;
+}
+
+@media only screen and (max-width:500px) {
+    .desc{
+        gap:30px;
+        text-align: center;
+    }
+
+    .ovals{
+        font-size: x-small;
+    }
+
+    .moto1{
+        font-size: 30px;
+    }
+
+    .moto2{
+
+        font-weight: 400;
+    }
+    .reasons{
+        display: none;
+    }
+
+    .dashboard{
+        width: 325px;
+        height: 210px;
+        object-fit: contain;
+    }
+
+    .servicesContainer{
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+        /* border: solid 1px red; */
+        width: fit-content;
+        max-width: none;
+        margin: auto;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .serviceTitleContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 400;
+        color: black;
+
+        font-size:medium;
+        text-align: center;
+    }
+    .serviceHeaderTitle{
+        font-weight: 600;
+
+        font-size: 30px;
+    }
+
+    .services{
+        
+        flex-wrap:nowrap;
+        width:350px;
+        height: 250px;
+        margin-bottom: 50px;
+        padding: 10px 5px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .service{
+
+        min-width: 250px;
+        height: 175px;
+        font-size: small;
+    }
+
+
+    .serviceTitle{
+        font-size: medium;
+    }
+
+
+    .section1{
+        
+        /* border:solid 1px red; */
+        width:95%;
+
+        font-size: smaller;
+        margin: 10px;
+    }
+
+    .section1Image{
+        width: 250px;
+        height:180px;
+    }
+
+    .section1Block{
+        gap:0px;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+        margin: 10px;
+        max-width: 325px;
+        overflow: hidden;
+    }
+
+    .subBlocks{
+        flex-direction: column;
+    }
+
+    .section2{
+        margin: 50px 0px;
+        max-width:none;   
+        font-size: smaller;
+    }
+
+    .section2Block{
+        min-width: 250px;
+        max-width: 250px;
+        height: 200px;
+        display: inline-block;
+    }
+    .section2Title{
+        font-size: medium;
+    }
+    .section2BlockContainer{
+        display: flex;
+        max-width: 350px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .section2Video{
+        margin: 0px;
+        width: 300px;
+        height: 190px;
+    }
+
+
+    .tabContainer{
+        display: none;
+    }
+
+    .tabImage{
+        width: 350px;
+        height: 250px;
+
+    }
+    .tabContent{
+        
+        gap:10px;
+        flex-direction: column;
+    }
+
+    .tabText{
+        font-size: small;
+        padding: 10px;
+        font-weight: 600;
+    }
+
+    .trySection{
+        margin:30px auto;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        width: fit-content;
+
+        font-size: x-small;
+    }
+
+
 }

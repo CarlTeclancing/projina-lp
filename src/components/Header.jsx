@@ -13,9 +13,17 @@ const Header =() =>{
     return(
         <React.Fragment> 
             <div className='header'>
+                <div >
+                    <button className='mobile-login'>login</button>
+                </div>
+
                 <div className='logo'> 
                     <img src={icon} alt='logo' width={'40px'} height={'40px'} />
                     Pro<b style={{color:'#5B0C4E'}}>jina</b>
+                </div>
+
+                <div className='menu-bar' >
+                    🍔
                 </div>
   
                 <div className={'headerLinks'}> 

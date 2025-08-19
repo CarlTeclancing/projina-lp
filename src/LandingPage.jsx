@@ -22,9 +22,9 @@ const LandingPage = () => {
     return(
         <React.Fragment>
 
-            <img src={star1} style={{position:'absolute' ,top:'191px' ,left:'371px'}} />
-            <img src={star2} style={{position:'absolute' ,top:'464px' ,left:'1445px'}}/>
-            <img src={star3} style={{position:'absolute' ,top:'649px' ,left:'126px'}}/>
+            {/* <img src={star1} style={{position:'absolute' ,top:'191px' ,left:'371px'}} /> */}
+            {/* <img src={star2} style={{position:'absolute' ,top:'464px' ,left:'1445px'}}/> */}
+            {/* <img src={star3} style={{position:'absolute' ,top:'649px' ,left:'126px'}}/> */}
 
 
             {/* <Header/> */}
@@ -52,44 +52,9 @@ const LandingPage = () => {
             <div className={styles.servicesContainer}>
                 <div className={styles.serviceTitleContainer} >
                     <div className={styles.serviceHeaderTitle}>One <span style={{color:'#EA5254'}}>Platform.</span> Every Tool You Need</div>
-                    <div style={{textAlign:'center'}} >With Projina, you manage better, work faster, and grow smarter using tools for finance, employees, projects,<br/> and schedules  all tailored for today’s businesses.</div>
+                    <div style={{textAlign:'center'}} >With Projina, you manage better, work faster, and grow smarter using tools for finance, employees, projects, and schedules  all tailored for today’s businesses.</div>
                 </div>
 
-                {/* <div className={styles.services}>
-                    <div className={styles.service}>
-                        <div><span className={styles.serviceIcon}>💰</span></div>
-                        <div className={styles.serviceTitle}> Finance Management </div>
-                        <div>Track expenses, revenue, budgets, and financial reports in real time to keep your business on track.</div>
-                    </div>
-
-                    <div className={styles.service}>
-                        <div><span className={styles.serviceIcon}>👩</span></div>
-                        <div className={styles.serviceTitle} > Employee Management </div>
-                        <div>Manage staff profiles, roles, attendance, and performance from one centralized dashboard.</div>
-                    </div>
-
-                    <div className={styles.service}>
-                        <div><span className={styles.serviceIcon}>📁</span></div>
-                        <div className={styles.serviceTitle}> Project Management </div>
-                        <div>Plan, assign, and monitor projects from start to finish with clear timelines and progress tracking.</div>
-                    </div>
-
-                    <div className={styles.service}>
-                        <div> <span className={styles.serviceIcon}>📆</span></div>
-                        <div className={styles.serviceTitle}> Schedule & Calendar </div>
-                        <div> Organize company events, deadlines, and meetings in a shared, easy-to-use calendar. </div>
-                    </div>
-                    <div className={styles.service}>
-                        <div><span className={styles.serviceIcon}>📊</span></div>
-                        <div className={styles.serviceTitle}> Analytics Dashboard </div>
-                        <div> Get actionable insights into performance, efficiency, and growth opportunities.</div>
-                    </div>
-                    <div className={styles.service}>
-                        <div><span className={styles.serviceIcon}>📦</span></div>
-                        <div className={styles.serviceTitle}> Resource & Inventory Tracking </div>
-                        <div>Monitor assets, office supplies, and materials to ensure nothing falls through the cracks.</div>
-                    </div>
-                </div> */}
                 <Services/>
 
             </div>
@@ -103,7 +68,7 @@ const LandingPage = () => {
                         <img src={sec2Img} style={{ objectFit:'contain'}} width={'400px'} height={'350px'} />
                     </div>
 
-                    <div style={{width:'350px'}}>
+                    <div style={{width:'325px'}}>
                         <h3>Finance Tracking & Categorizing</h3>
                         <p>Track your company’s income and expenses with automatic categorization by department, project, or expense type. Get real-time insights to improve budgeting and cut unnecessary costs.</p>
                     </div>
@@ -112,7 +77,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className={styles.section1Block}>
-                    <div style={{width:'350px'}}>
+                    <div style={{width:'325px'}}>
                         <h3>Project & Task Planning</h3>
                         <p>Seamlessly organize projects, assign tasks, and set clear deadlines. Keep teams aligned and projects progressing with performance milestones.</p>
                     </div>
@@ -121,7 +86,7 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div  style={{display:'flex', justifyContent:'space-between' ,gap:'20px'}}>
+                <div className={styles.subBlocks}>
                     <div style={{backgroundColor:'white' ,padding:10, borderRadius:10}} >
                         <h3>Employee Payroll & Benefits Management</h3>
                         <p>Easily manage staff salaries, allowances, and deductions. Process payroll quickly and accurately with automated reports — no manual errors.</p>
@@ -136,10 +101,10 @@ const LandingPage = () => {
 
             <div className={styles.section2}>
                 <div>
-                    <h1 style={{textAlign:'center'}}>Designed for the real needs of modern businesses.</h1>
+                    <h1 className={styles.section2Title} >Designed for the real needs of modern businesses.</h1>
                 </div>
 
-                <div style={{ display:'block', gap:10}}>
+                <div className={styles.section2BlockContainer}>
                     <div className={styles.section2Block}>
                         <h5>Automated Workflows</h5>
                         <span style={{color:'#EA5254', fontSize:30, fontWeight:600}}>500hours</span>
@@ -161,7 +126,7 @@ const LandingPage = () => {
 
                 {/* Video section */}
                 <div>
-                    <video src="" type="video/mp4" controls width={900} height={450} style={{backgroundColor:'rgb(200,200,200)' ,borderRadius:10 ,margin:'40px 0px'}} />
+                    <video src="" type="video/mp4" controls className={styles.section2Video} />
                 </div>
 
             </div>

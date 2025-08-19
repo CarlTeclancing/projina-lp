@@ -21,8 +21,8 @@ const Footer = () =>{
                 </div>
             </div>
 
-            <div className={styles.dashboard} style={{height:350}}>
-                <img src={dashboard} width={'1246px'}  />
+            <div className={styles.dashboard} style={{height:250}}>
+                <img src={dashboard}  />
             </div>
 
 
@@ -74,9 +74,11 @@ const Footer = () =>{
                             </div>
                         </div>
 
-                        <div style={{padding:20}}>
+                        <div style={{padding:20 ,fontSize:'smaller'}}>
                             <span className="footer-block-title">News Letter</span>
-                            <p>Stay updated with the latest Projina features, product upgrades, and useful resources <br/> no spam, ever. You can unsubscribe anytime.</p>
+                            <p>Stay updated with the latest Projina features, <br/>
+                            product upgrades, and useful resources  no spam, ever.<br/>
+                             You can unsubscribe anytime.</p>
                             <input type="text" className="input" placeholder="Enter your email address"/> &nbsp;&nbsp;&nbsp; <button>Subscribe</button>
                         </div>
 
