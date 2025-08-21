@@ -45,7 +45,7 @@ const Solutions = () => {
                 <div className="solution-container" >
                     <div >
                         <div className="solution-header">
-                            <span className="solution-title">All-in-one Company Management <br/> for <span style={{color:'#EA5254'}} >Today's Companies</span> </span>
+                            <span className="solution-title">All-in-one Company Management  for <span style={{color:'#EA5254'}} >Today's Companies</span> </span>
                             <span>
                                 <button className="btn-color" >Sign up for free</button> &nbsp;&nbsp;&nbsp;
                                 <button className="btn">Contact Sales</button>
@@ -58,9 +58,9 @@ const Solutions = () => {
 
                     </div>
 
-                    <div style={{textAlign:'center'}}>
-                        <span style={{fontSize:60 ,fontWeight:600 ,color:'black' ,lineHeight:'125%'}}>Tailored <span style={{color:'#EA5254'}} >Solutions</span> for Every <br/>Business Size</span>
-                        <p>Whether you’re just starting out or running a large enterprise, Projina equips you<br/> with powerful tools to manage finances, teams, projects, and schedules — keeping<br/> operations smooth and growth on track.</p>
+                    <div style={{textAlign:'center' ,padding:10}}>
+                        <span className=" solution-title">Tailored <span style={{color:'#EA5254'}} >Solutions</span> for Every <br/>Business Size</span>
+                        <p>Whether you’re just starting out or running a large enterprise, Projina equips you with powerful tools to manage finances, teams, projects, and schedules — keeping operations smooth and growth on track.</p>
                     </div>
 
                     <div className="sBlocks" >
@@ -125,9 +125,9 @@ const Solutions = () => {
                         </div>
                     </div>
 
-                    <h1 style={{fontWeight:400}}>
+                    <span style={{fontWeight:400}} className="faq-title">
                         Frequently Asked Questions
-                    </h1>
+                    </span>
 
                     <div className="faq-container">
                         {

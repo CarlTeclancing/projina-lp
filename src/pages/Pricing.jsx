@@ -10,7 +10,7 @@ const Pricing = () => {
                 <div className="pricing-container" >
                     <div className="pricing-header">
                         <span className="pricing-title">Pricing<span style={{color:'#5B0C4E'}} >Plans</span></span>
-                        <div>You can monitor all your clients, projects, task, schedule meetings, distribute files and manage inventory,finances and more in one place.</div>
+                        <div>You can monitor all your clients, projects, task, schedule meetings,  distribute files and manage inventory,finances and more in one place.</div>
                         <span>
                             <button className="btn-color">Sign up for free</button>&nbsp;&nbsp;&nbsp;
                             <button className="btn">Contact sales</button>
@@ -43,7 +43,7 @@ const Pricing = () => {
                         </div>
 
                         <div className="pricing-block growth-block">
-                            <h3>Growth</h3>
+                            <h3 style={{display:'flex',justifyContent:'space-between' ,alignItems:'center'}}> <span>Growth</span> <button disabled style={{borderColor:'grey' ,padding:5 ,color:'grey'}}>Most popular</button> </h3>
                             <span style={{color:'black'}}>Built for distributors, marketplaces, and large <br/> teams.</span>
                             <div className="price">
                                 <span>6,000</span>

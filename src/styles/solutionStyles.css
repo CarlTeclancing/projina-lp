@@ -78,6 +78,9 @@
     border-bottom: solid 1px rgb(200,200,200);
     padding:10px;
 }
+.faq-title{
+    font-size: 45px;
+}
 
 .faq-header{
     display: flex;
@@ -100,4 +103,40 @@
 
 .faq-arrow-active{
     transform: rotate(180deg);
+}
+
+@media only screen and (max-width:500px){
+    .solution-container{        
+        padding:50px  0px;
+        max-width: none;
+        font-size: small;
+    }
+
+    .solution-title{
+
+        font-size: 30px;
+    }
+
+    .sBlock{
+        flex-direction: column;
+        border: solid 1px rgba(0,0,0,0.4);
+        border-radius: 10px;
+        align-items: center;
+        padding: 5px 0px;
+    }
+
+    .sBlock-img{
+        object-fit: cover;
+        height: 250px;
+        width: 350px;
+    }
+    .sBlock-text{
+        padding:20px;
+
+        max-width: 350px;
+    }
+    .faq-title{
+        font-size: 25px;
+    }
+
 }
