@@ -53,3 +53,19 @@
     background-color:rgb(200,200,200);
     border-radius: 50px;
 }
+
+@media only screen and (max-width:500px) {
+    .about-container{
+        padding:50px 0px;
+        max-width: none;
+        font-size: smaller;
+    }
+
+    .about-title{
+        font-size: 30px;
+    }   
+
+    .smaller-title{
+        font-size: 25px;
+    }
+}

@@ -14,7 +14,7 @@ const About = () => {
             <div className="about-container">
 
                 <span className="about-title">About Us</span>
-                <div style={{textAlign:'center'}}>Projina is an all-in-one company management system built to simplify <br/> operations and empower businesses of every size.</div>
+                <div style={{textAlign:'center'}}>Projina is an all-in-one company management system built to simplify operations and empower businesses of every size.</div>
 
                 <div className={styles.dashboard}>
                     <img src={aboutImg1}  />
@@ -27,7 +27,7 @@ const About = () => {
                     </div>
 
                     <div>
-                        <Product/>
+                        {/* <Product/> */}
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@ const About = () => {
                     </div>
                 </div>
 
-                <h2 className="about-title">What Founders Are Saying</h2>
+                <h2 className="about-title smaller-title">What Founders Are Saying</h2>
 
                 <div className="about-blocks">
                     <div className="about-block">
