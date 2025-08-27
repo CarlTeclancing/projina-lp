@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link ,useLocation } from 'react-router-dom'
+import { Link ,useLocation ,useNavigate } from 'react-router-dom'
 import styles from '../styles/landingStyles.module.css'
 import '../styles/headerStyles.css'
 
@@ -10,6 +10,7 @@ import arrowBack from '../assets/arrow-back.png'
 import close from '../assets/close.png'
 
 const Header =() =>{
+    const navigate = useNavigate()
     const location = useLocation()
     const [show, setShow] = useState(false)
     const [showMenu ,setShowMenu] = useState(false)
@@ -72,7 +73,7 @@ const Header =() =>{
                     <span className={location.pathname == '/pricing' ? 'active-link':''}> <Link to={'/pricing'} onClick={()=>closeMenu()} >Pricing</Link> </span>
                     <span className={location.pathname == '/about' ? 'active-link':''}> <Link to={'/about'} onClick={()=>closeMenu()}>About & Testimonials</Link> </span>
                     <span> <button className={styles.loginBtn}>Sign up for free </button>  </span>
-                    <span> <button className={styles.registerBtn}>Contact Sales <img src={arrowBack} alt='here' /></button> </span>
+                    <span> <button className={styles.registerBtn} onClick={()=>navigate("/contact-us")} >Contact Sales <img src={arrowBack} alt='here' /></button> </span>
                 </div>
 
                 <div className='mobile-menu-footer'>

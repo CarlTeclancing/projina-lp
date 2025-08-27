@@ -8,9 +8,11 @@ import sol2 from '../assets/sol2.png'
 import sol3 from '../assets/sol3.png'
 import sol4 from '../assets/sol4.png'
 import sworking from '../assets/sworking.jpg'
+import { useNavigate } from "react-router-dom";
 
 
 const Solutions = () => {
+    const navigate = useNavigate()
 
     const data = [
         {   
@@ -48,7 +50,7 @@ const Solutions = () => {
                             <span className="solution-title">All-in-one Company Management  for <span style={{color:'#EA5254'}} >Today's Companies</span> </span>
                             <span>
                                 <button className="btn-color" >Sign up for free</button> &nbsp;&nbsp;&nbsp;
-                                <button className="btn">Contact Sales</button>
+                                <button className="btn" onClick={()=>navigate("contact-us")}>Contact Sales</button>
                             </span>
                         </div>
 

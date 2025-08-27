@@ -7,8 +7,10 @@ import facebook from '../assets/facebook.png'
 import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'
 import dashboard from '../assets/dashboard.png'
+import { useNavigate } from "react-router-dom";
 
 const Footer = () =>{
+    const navigate = useNavigate()
     return(
         <React.Fragment>
 
@@ -16,7 +18,7 @@ const Footer = () =>{
                 <h1>Try us for <span style={{color:'#EA5254'}}>Free</span></h1>
             
                 <div style={{display:'flex' ,gap:20}}>
-                    <button style={{border:'solid 1px rgb(175,175,175)'}}>Contact Sales</button>
+                    <button style={{border:'solid 1px rgb(175,175,175)'}} onClick={()=>navigate("/contact-us")} >Contact Sales</button>
                     <button style={{color:'white' ,backgroundColor:'#5B0C4E'}} >Sign up for free</button>
                 </div>
             </div>

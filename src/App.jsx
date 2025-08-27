@@ -6,6 +6,7 @@ import NotFound from './pages/404.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Solutions from './pages/Solutions.jsx'
 import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
 
         </Route>
+          <Route path='/contact-us' element={<Contact/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
