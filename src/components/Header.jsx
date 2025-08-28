@@ -75,7 +75,7 @@ const Header =() =>{
                     <span className={location.pathname == '/pricing' ? 'active-link':''}> <Link to={'/pricing'} onClick={()=>closeMenu()} >Pricing</Link> </span>
                     <span className={location.pathname == '/about' ? 'active-link':''}> <Link to={'/about'} onClick={()=>closeMenu()}>About & Testimonials</Link> </span>
                     <span> 
-                        <a href='https://www.app.projina.top' >
+                        <a href='https://www.app.projina.top/onboarding' >
                         <button className={styles.loginBtn}>Sign up for free </button>  </span>
                         </a>
                     <span> <button className={styles.registerBtn} onClick={()=>navigate("/contact-us")} >Contact Sales <img src={arrowBack} alt='here' /></button> </span>
