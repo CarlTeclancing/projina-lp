@@ -2,10 +2,10 @@
     width: 100%;
     background-color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     /* border:solid 1px red; */
-    /*padding: 10px;*/
+    padding: 10px;
 }
 
 .logo{
