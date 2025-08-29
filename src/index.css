@@ -31,6 +31,10 @@ body {
   background-image: url('./assets//bg_image.jpg');
   background-size: contain;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
   /* display: flex; */
   /* place-items: center; */
   min-width: 320px;
