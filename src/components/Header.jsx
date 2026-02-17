@@ -78,10 +78,10 @@ const Header = () => {
         </div>
 
         <div className={'headerBtns'}>
-          <a href="https://app.projina.top">
+          <a href="http://crms.projina.top/">
             <button className={styles.loginBtn}>Login</button>
           </a>
-          <a href="https://app.projina.top/onboarding">
+          <a href="https://crms.projina.top/public/register">
             <button className={styles.registerBtn}>Sign up for free</button>
           </a>
         </div>
@@ -127,7 +127,7 @@ const Header = () => {
           </span>
 
           <span>
-            <a href="https://app.projina.top/onboarding">
+            <a href="https://crms.projina.top/public/register">
               <button className={styles.loginBtn}>Sign up for free</button>
             </a>
           </span>
