@@ -1,0 +1,175 @@
+.pricing-bg{
+    background-color: white;
+    background-position: top;
+
+    background-image: url('../assets/pricingBg.png');
+}
+
+.pricing-container{
+    width: fit-content;
+    margin: auto;
+    padding:100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    gap:100px;
+}
+
+.pricing-header{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+.pricing-title{
+    font-size: 60px;
+    font-weight: 600;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    align-items: baseline;
+}
+.price span:first-child{
+    font-size: 24px;
+    font-weight: 600;
+    color: #5B0C4E;
+}
+.price span:last-child{
+    font-size: small;
+}
+b{
+    color: black;
+}
+
+.pricings{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    max-width: 700px;
+    justify-items: center;
+}
+
+.custom-pricing-container {
+    display: none;
+}
+
+.custom-pricing-block {
+    border: solid 2px #5B0C4E !important;
+    background: linear-gradient(135deg, rgba(91, 12, 78, 0.05) 0%, rgba(91, 12, 78, 0.02) 100%);
+}
+
+.pricing-block{
+    border: solid 1px rgb(200,200,200);
+    background-color: rgb(250,250,250);
+    border-radius: 10px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.growth-block{
+    border: solid 1px #5B0C4E;
+    background-color: white;
+}
+
+.pricing-block h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.pricing-block ul {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.btn{
+    border:solid 1px rgb(150,150,150);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-color{
+    background-color:#5B0C4E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-color:hover {
+    background-color: #4a0a3d;
+    transform: translateY(-2px);
+}
+
+ul{
+    list-style-image: url('../assets//circleCheck.png');
+    line-height: 200%;
+}
+
+@media only screen and (max-width:500px){
+    .pricing-container{
+        padding:50px 0px;
+        max-width: 500px;
+        font-size: small;
+    }
+
+    .pricing-header{        
+        padding:0px 50px;
+        flex-wrap: wrap;
+    }
+    .pricing-title{
+        font-size: 30px;
+    }
+
+    .pricings{
+        display: flex;
+        gap:20px;
+        flex-direction: column;
+    }
+
+    .custom-pricing-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pricing-block{
+        border: solid 1px rgb(200,200,200);
+        background-color: rgb(250,250,250);
+        border-radius: 10px;
+        padding:10px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        min-width: auto;
+    }
+    .growth-block{
+        border: solid 1px #5B0C4E;
+    }
+
+    .custom-pricing-block {
+        border: solid 2px #5B0C4E !important;
+    }
+
+}
