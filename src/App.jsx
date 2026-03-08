@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import LandingPage from './LandingPage'
-import { BrowserRouter ,Routes ,Route  ,Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './Layout'
 import NotFound from './pages/404.jsx'
 import Pricing from './pages/Pricing.jsx'
@@ -15,18 +15,14 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
-        
         <Route path='/' element={<Layout/>}>
-          <Route index path='/home' element={<LandingPage/>} />
-          <Route index path='/' element={<Navigate to={"/home"} />} />
-
+          <Route index element={<LandingPage/>} />
           <Route path='/pricing' element={<Pricing/>} />
           <Route path='/solutions' element={<Solutions/>} />
           <Route path='/about' element={<About/>}/>
-
         </Route>
-          <Route path='/contact-us' element={<Contact/>} />
+        <Route path='/contact-us' element={<Contact/>} />
+        <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
