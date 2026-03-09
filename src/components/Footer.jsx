@@ -5,7 +5,8 @@ import styles from '../styles/landingStyles.module.css'
 import iconWhite from '../assets/icon-white.png'
 import dashboard from '../assets/dashboard.png'
 import { useNavigate } from "react-router-dom";
-import { FaFacebook, FaLinkedin, FaInstagram, FaApple, FaGoogle } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram, FaApple } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
 
 const Footer = () =>{
     const navigate = useNavigate()
@@ -87,7 +88,7 @@ const Footer = () =>{
                                     </div>
                                 </button>
                                 <button className="app-btn play-store-btn">
-                                    <FaGoogle size={20} />
+                                    <FaGooglePlay size={20} />
                                     <div>
                                         <div style={{fontSize:'11px'}}>Get it on</div>
                                         <div style={{fontSize:'16px', fontWeight:'600'}}>Google Play</div>
