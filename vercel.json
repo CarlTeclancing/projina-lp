@@ -5,12 +5,6 @@
   "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
