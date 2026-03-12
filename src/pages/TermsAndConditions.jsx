@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
     const navigate = useNavigate();
 
     const handleNext = () => {
-        if (currentPage < 3) {
+        if (currentPage < 4) {
             setCurrentPage(currentPage + 1);
         }
     };
@@ -19,7 +19,7 @@ const TermsAndConditions = () => {
     };
 
     const handleAgree = () => {
-        navigate("/home");
+        navigate("/");
     };
 
     return (
@@ -29,93 +29,233 @@ const TermsAndConditions = () => {
                     {currentPage === 1 && (
                         <div className="terms-page">
                             <h1>Terms and Conditions</h1>
-                            <span className="terms-label">AGREEMENT</span>
+                            <span className="terms-label">Effective Date: [Insert Date]</span>
                             
                             <div className="terms-section">
+                                <p>Welcome to Projina, a project management platform developed and operated by Crestlancing, a registered company based in Cameroon. These Terms and Conditions govern your access to and use of the Projina platform available at https://crms.projina.top</p>
+                                <p>By accessing or using Projina, you agree to be bound by these Terms and Conditions. If you do not agree with these terms, please do not use the platform.</p>
+                            </div>
+
+                            <div className="terms-section">
                                 <h2>1. About Projina</h2>
-                                <p>Welcome to Projina, a project management platform developed and operated by Unschooling, a registered company based in Cameroon.</p>
-                                <p>By accessing or using Projina, you agree to comply with and be bound by all of these Terms and Conditions. If you do not agree with any part of these terms, you must not use this platform.</p>
+                                <p>Projina is a project management application designed for software teams to manage projects, assign tasks, collaborate with team members, and track work progress.</p>
+                                <p>The platform allows organizations to create workspaces where employees can access projects, tasks, files, and other work-related information.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>2. User Accounts and Access</h2>
-                                <p>To use Projina, you must register for an account and provide accurate information. You are responsible for maintaining the confidentiality of your login credentials and are liable for all activities under your account. You agree to notify Projina immediately of any unauthorized use of your account.</p>
+                                <h2>2. Account Registration</h2>
+                                <p>Access to Projina requires an account.</p>
+                                <p>Accounts are typically created by a company's administrator who provides login credentials to employees.</p>
+                                <p>Users may also request access to a company workspace by submitting their name, work email address, and role within the organization.</p>
+                                <p>By using Projina, you agree that the information you provide is accurate and up to date.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>3. User Roles and Permissions</h2>
-                                <p>Organizations can assign team members different roles within a dedicated workspace. Each organization controls its members' workspace access and assigned responsibilities.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>4. Acceptable Use Policy</h2>
-                                <p>You agree not to use Projina to:</p>
+                                <h2>3. User Roles</h2>
+                                <p>Projina supports different user roles including administrators and employees.</p>
+                                <p><strong>Administrators may:</strong></p>
                                 <ul>
-                                    <li>Attempt to hack, defect, or compromise the platform</li>
-                                    <li>Create malicious content or engage in harmful activities</li>
-                                    <li>Use the platform for unlawful or fraudulent activities</li>
-                                    <li>Attempt to gain unauthorized access to other user accounts</li>
-                                    <li>Violate any applicable laws or regulations</li>
-                                    <li>Use the platform without direct permission from Unschooling</li>
+                                    <li>Create and manage projects</li>
+                                    <li>Create teams and assign members</li>
+                                    <li>Assign tasks and responsibilities</li>
+                                    <li>Manage workspace users</li>
+                                    <li>Delete user accounts</li>
+                                </ul>
+                                <p><strong>Employees may:</strong></p>
+                                <ul>
+                                    <li>View assigned projects</li>
+                                    <li>Create and manage tasks related to their work</li>
+                                    <li>Upload files and share documents with team members</li>
                                 </ul>
                             </div>
 
                             <div className="terms-section">
-                                <h2>5. Billing and Payments</h2>
-                                <p>Subscription payments may be made through available payment methods including credit cards and bank transfers. By selecting a payment method, you authorize charges according to the selected billing cycle. You can view and update your payment information in your billing settings.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>6. Free Trial and Subscription Plans</h2>
-                                <p>Projina offers a free trial period, allowing the following perks:</p>
+                                <h2>4. Acceptable Use</h2>
+                                <p>Users agree not to misuse the platform. The following activities are strictly prohibited:</p>
                                 <ul>
-                                    <li>Basic plan - Full features for trial teams and organizations</li>
-                                    <li>Enterprise plan - Customizable features for larger organizations</li>
+                                    <li>Uploading illegal, harmful, or malicious content</li>
+                                    <li>Attempting to hack or disrupt the platform</li>
+                                    <li>Uploading viruses or malware</li>
+                                    <li>Attempting unauthorized access to other accounts</li>
+                                    <li>Using the platform for unlawful activities</li>
                                 </ul>
-                                <p>By registering or using Projina, you agree that the trial ends automatically after 14 days (you will receive email notifications when your trial is ending).</p>
+                                <p>Crestlancing reserves the right to suspend or terminate accounts that violate these rules.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>7. Account Restrictions and Termination</h2>
-                                <p>Projina reserves the right to suspend or terminate your account if you violate these terms or engage in prohibited use. Upon termination, you will no longer have access to your account, and no future billing will occur, but historical data will not be deleted.</p>
+                                <h2>5. Subscription Plans</h2>
+                                <p>Projina operates under a freemium model with three plans:</p>
+                                <ul>
+                                    <li>Basic Plan</li>
+                                    <li>Pro Plan</li>
+                                    <li>Enterprise Plan</li>
+                                </ul>
+                                <p>Paid subscriptions may be billed monthly or yearly.</p>
+                                <p>Access to premium features depends on the selected plan.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>8. Intellectual Property</h2>
-                                <p>All content on Projina, including but not limited to software, design, graphics, text, and functionality—remains the exclusive property of Unschooling. Users may not copy, reproduce, distribute, or use any part of the platform without direct permission from Unschooling.</p>
+                                <h2>6. Billing and Payments</h2>
+                                <p>Payments may be made through available payment methods including:</p>
+                                <ul>
+                                    <li>Mobile Money</li>
+                                    <li>Bank Transfer</li>
+                                </ul>
+                                <p>Subscription fees must be paid in advance according to the selected billing cycle.</p>
+                                <p>Failure to make payment may result in suspension of premium features.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>7. Subscription Cancellation</h2>
+                                <p>Users may cancel their subscription at any time.</p>
+                                <p>When a subscription is canceled, access to premium features will continue until the end of the current billing period.</p>
+                                <p>After the billing period ends, the account may revert to the free plan if available.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>8. Platform Availability</h2>
+                                <p>Crestlancing strives to ensure that Projina operates smoothly and reliably. However, the platform may occasionally experience downtime due to:</p>
+                                <ul>
+                                    <li>System maintenance</li>
+                                    <li>Updates</li>
+                                    <li>Technical issues</li>
+                                    <li>External service disruptions</li>
+                                </ul>
+                                <p>Crestlancing does not guarantee uninterrupted service availability.</p>
                             </div>
 
                             <div className="terms-section">
                                 <h2>9. Data Responsibility</h2>
-                                <p>While Projina implements systems to protect user data and information on the platform, Projina cannot guarantee 100% security and is not responsible for any data loss, breach, or security incidents. Users should maintain independent backups of critical data.</p>
+                                <p>Users are responsible for the data they upload or share on the platform. Although Projina maintains systems to protect data, users are encouraged to maintain backups of important information. Crestlancing shall not be liable for any loss of data resulting from technical failures or user actions.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>10. Limitation of Liability</h2>
-                                <p>To the fullest extent permitted by law, Projina and Unschooling shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from the use of or inability to use the platform or services provided through Projina.</p>
+                                <h2>10. Intellectual Property</h2>
+                                <p>All intellectual property rights related to Projina, including its software, design, branding, and functionality, remain the property of Crestlancing. Users may not copy, reproduce, or distribute any part of the platform without permission.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>11. Third-Party Links and Services</h2>
-                                <p>Projina may contain links and references to third-party websites and services. Projina is not responsible for the content, accuracy, or practices of external links. Users access third-party services at their own risk.</p>
+                                <h2>11. Termination of Accounts</h2>
+                                <p>Crestlancing may suspend or terminate user accounts if:</p>
+                                <ul>
+                                    <li>These Terms are violated</li>
+                                    <li>The platform is used illegally</li>
+                                    <li>Security risks are detected</li>
+                                </ul>
+                                <p>Company administrators may also remove users from their organization workspace.</p>
                             </div>
 
                             <div className="terms-section">
-                                <h2>12. Changes to Terms and Conditions</h2>
-                                <p>Projina reserves the right to modify these terms at any time. Users will be notified of significant changes via email. Continued use of Projina following updates constitutes acceptance of the revised terms.</p>
+                                <h2>12. Changes to the Terms</h2>
+                                <p>Crestlancing may update these Terms and Conditions from time to time. Users will be notified of significant updates through the platform or website. Continued use of the platform after changes means acceptance of the updated terms.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>13. Governing Law</h2>
+                                <p>These Terms and Conditions are governed by the laws of Cameroon.</p>
                             </div>
                         </div>
                     )}
 
                     {currentPage === 2 && (
                         <div className="terms-page">
-                            <h1>Refund Policy</h1>
-                            <span className="terms-label">AGREEMENT</span>
+                            <h1>Privacy Policy</h1>
+                            <span className="terms-label">Effective Date: [Insert Date]</span>
                             
                             <div className="terms-section">
-                                <h2>1. Refund Eligibility</h2>
+                                <p>Crestlancing respects your privacy and is committed to protecting the personal information of Projina users. This Privacy Policy explains how we collect, use, and protect your information when you use Projina.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>1. Information We Collect</h2>
+                                <p>Projina may collect the following information:</p>
+                                <p><strong>User Information</strong></p>
+                                <ul>
+                                    <li>Name</li>
+                                    <li>Work email address</li>
+                                    <li>Role within the company (optional)</li>
+                                </ul>
+                                <p><strong>Company Information</strong></p>
+                                <ul>
+                                    <li>Company name</li>
+                                    <li>Address</li>
+                                    <li>Industry</li>
+                                    <li>Company logo</li>
+                                </ul>
+                                <p><strong>Platform Data</strong></p>
+                                <ul>
+                                    <li>Project information</li>
+                                    <li>Task details</li>
+                                    <li>Uploaded files</li>
+                                    <li>Workspace data</li>
+                                </ul>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>2. How We Use Your Information</h2>
+                                <p>We use collected data to:</p>
+                                <ul>
+                                    <li>Provide access to the platform</li>
+                                    <li>Manage company workspaces</li>
+                                    <li>Enable collaboration between team members</li>
+                                    <li>Improve platform performance</li>
+                                    <li>Maintain system security</li>
+                                </ul>
+                                <p>User and company data are stored solely for the purpose of operating the Projina platform.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>3. Cookies</h2>
+                                <p>Projina uses cookies to improve user experience.</p>
+                                <p>Cookies help us:</p>
+                                <ul>
+                                    <li>Maintain login sessions</li>
+                                    <li>Improve platform performance</li>
+                                    <li>Remember user preferences</li>
+                                </ul>
+                                <p>Users may disable cookies in their browser settings, but some platform features may not function properly.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>4. Data Sharing</h2>
+                                <p>Projina does not sell or rent user data.</p>
+                                <p>Information may only be shared when necessary to:</p>
+                                <ul>
+                                    <li>Operate the platform</li>
+                                    <li>Comply with legal obligations</li>
+                                    <li>Protect the security of the system</li>
+                                </ul>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>5. Data Security</h2>
+                                <p>Crestlancing implements reasonable security measures to protect user data from unauthorized access, loss, or misuse. However, no system can guarantee absolute security.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>6. Account Deletion</h2>
+                                <p>User accounts may only be deleted by the company administrator of the workspace. If an organization chooses to remove a user, their access to the platform will be revoked.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>7. Policy Updates</h2>
+                                <p>This Privacy Policy may be updated periodically to reflect improvements to the platform or changes in legal requirements. Users will be notified of major changes.</p>
+                            </div>
+                        </div>
+                    )}
+
+                    {currentPage === 3 && (
+                        <div className="terms-page">
+                            <h1>Refund Policy</h1>
+                            <span className="terms-label">Effective Date: [Insert Date]</span>
+                            
+                            <div className="terms-section">
                                 <p>Projina offers paid subscription plans for organizations and teams.</p>
-                                <p>Customers may request a refund within 30 days of a subscription payment. Refund requests submitted after this period may not be considered.</p>
+                            </div>
+
+                            <div className="terms-section">
+                                <h2>1. Refund Eligibility</h2>
+                                <p>Customers may request a refund within 30 days (1 month) of a subscription payment. Refund requests must be submitted within this period to be considered.</p>
                             </div>
 
                             <div className="terms-section">
@@ -124,90 +264,55 @@ const TermsAndConditions = () => {
                                 <ul>
                                     <li>Accidental or duplicate payments</li>
                                     <li>Billing errors</li>
-                                    <li>Service dissatisfaction within the refund eligibility period</li>
+                                    <li>Service dissatisfaction within the refund period</li>
                                 </ul>
                                 <p>All refund requests are reviewed by the Projina support team.</p>
                             </div>
 
                             <div className="terms-section">
                                 <h2>3. Refund Processing</h2>
-                                <p>Approved refunds will be processed using the original payment method, where possible. Processing times may vary depending on the payment provider.</p>
+                                <p>Approved refunds will be processed using the original payment method, when possible. Refund processing times may vary depending on the payment provider.</p>
                             </div>
 
                             <div className="terms-section">
                                 <h2>4. Non-Refundable Situations</h2>
                                 <p>Refunds may not be granted if:</p>
                                 <ul>
-                                    <li>The request is submitted after the 30-day refund period</li>
-                                    <li>The service has been extensively used beyond normal evaluation</li>
+                                    <li>The refund request is made after the 30-day refund period</li>
+                                    <li>The service has been significantly used beyond normal evaluation</li>
                                 </ul>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>5. Subscription Modifications</h2>
-                                <p>Customers can modify their subscription plan at any time. Changes will be reflected in the next billing cycle. Any credits resulting from downgrading will be applied to future invoices unless otherwise requested.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>6. Contact and Support</h2>
-                                <p>For refund inquiries or other concerns, please contact our support team at support@projina.com or through the support portal. We aim to respond to all inquiries within 48 business hours.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>7. Policy Updates</h2>
-                                <p>Projina reserves the right to update this refund policy at any time. Customers will be notified of significant changes via email. Continued use of Projina after policy updates constitutes acceptance of the new terms.</p>
                             </div>
                         </div>
                     )}
 
-                    {currentPage === 3 && (
+                    {currentPage === 4 && (
                         <div className="terms-page">
                             <h1>Cancellation Policy</h1>
-                            <span className="terms-label">AGREEMENT</span>
+                            <span className="terms-label">Effective Date: [Insert Date]</span>
                             
                             <div className="terms-section">
+                                <p>Projina subscriptions may be canceled at any time by the subscribing organization.</p>
+                            </div>
+
+                            <div className="terms-section">
                                 <h2>1. Subscription Cancellation</h2>
-                                <p>Projina subscriptions may be canceled at any time by the subscribing organization. Organizations may cancel their subscription before the next billing cycle to avoid future charges.</p>
+                                <p>Organizations may cancel their Projina subscription before the next billing cycle. Cancellation will prevent future billing.</p>
                             </div>
 
                             <div className="terms-section">
                                 <h2>2. Access After Cancellation</h2>
-                                <p>After cancellation:</p>
-                                <ul>
-                                    <li>Paid features remain active until the end of the billing period.</li>
-                                    <li>After the billing period expires, the workspace may revert to the free plan, if available.</li>
-                                </ul>
+                                <p>After cancellation, users will continue to have access to paid features until the end of the current billing period. Once the billing period expires, the workspace may revert to the free plan if available.</p>
                             </div>
 
                             <div className="terms-section">
                                 <h2>3. Data Access</h2>
                                 <p>Organizations may download or export their data before the end of the billing cycle if needed.</p>
                             </div>
-
-                            <div className="terms-section">
-                                <h2>4. Refunds on Cancellation</h2>
-                                <p>Cancellations do not entitle customers to refunds of already-paid subscription fees beyond the standard refund eligibility window (see Refund Policy). However, if cancellation occurs within the 30-day refund window and qualifies under refund conditions, customers may request a refund.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>5. Account Reactivation</h2>
-                                <p>Canceled subscriptions may be reactivated at any time. Reactivation will require a new subscription payment and will follow the current plan pricing at the time of reactivation.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>6. Cancellation Confirmation</h2>
-                                <p>A cancellation confirmation email will be sent to the account administrator upon successful cancellation.</p>
-                            </div>
-
-                            <div className="terms-section">
-                                <h2>7. Support Resources</h2>
-                                <p>If you have questions about cancellation, please contact support@projina.com or visit our Help Center for more information.</p>
-                            </div>
                         </div>
                     )}
 
                     <div className="terms-progress">
-                        <div className="progress-bar" style={{width: `${(currentPage / 3) * 100}%`}}></div>
+                        <div className="progress-bar" style={{width: `${(currentPage / 4) * 100}%`}}></div>
                     </div>
 
                     <div className="terms-footer">
@@ -220,7 +325,7 @@ const TermsAndConditions = () => {
                                 Previous
                             </button>
                             
-                            {currentPage < 3 && (
+                            {currentPage < 4 && (
                                 <button 
                                     onClick={handleNext}
                                     className="btn-nav-next"
@@ -230,7 +335,7 @@ const TermsAndConditions = () => {
                             )}
                         </div>
 
-                        {currentPage === 1 && (
+                        {currentPage === 4 && (
                             <button 
                                 onClick={handleAgree}
                                 className="btn-agree"

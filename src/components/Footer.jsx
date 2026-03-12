@@ -50,7 +50,7 @@ const Footer = () =>{
                                 Home <br/>
                                 Features <br/>
                                 Plan & Pricing <br/>
-                                <span onClick={()=>navigate("/terms-and-conditions")} style={{cursor:'pointer', color:'#EA5254', fontWeight:'500'}}>Terms & Conditions</span>
+                                <span onClick={()=>navigate("/terms-and-conditions")} style={{cursor:'pointer', color:'rgb(175,175,175)', fontWeight:'500'}}>Terms & Conditions</span>
                             </div>
 
                             <div className="footer-block">
@@ -97,7 +97,7 @@ const Footer = () =>{
                             </div>
                         </div>
 
-                        <div style={{padding:20 ,fontSize:'smaller'}}>
+                        <div style={{padding:20 ,fontSize:'smaller'}} className="newsletter-section">
                             <span className="footer-block-title">News Letter</span>
                             <p>Stay updated with the latest Projina features, <br/>
                             product upgrades, and useful resources  no spam, ever.<br/>

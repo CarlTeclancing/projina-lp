@@ -125,6 +125,23 @@
     outline: none;
 }
 
+.newsletter-section button {
+    background-color: white;
+    color: #5B0C4E;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-section button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 @media only screen and (max-width:500px) {
    .footer{
        background-color:#5B0C4E;
