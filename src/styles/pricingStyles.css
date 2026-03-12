@@ -48,12 +48,12 @@ b{
 
 .pricings{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px 50px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .custom-pricing-container {
