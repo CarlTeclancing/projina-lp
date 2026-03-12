@@ -48,12 +48,13 @@ b{
 
 .pricings{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 80px 50px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
+    align-items: start;
 }
 
 .custom-pricing-container {
@@ -74,8 +75,7 @@ b{
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    max-width: 350px;
-    min-height: 500px;
+    min-height: 550px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -135,6 +135,7 @@ ul{
 @media only screen and (max-width: 1200px) {
     .pricings {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
 }
 
@@ -155,7 +156,7 @@ ul{
 
     .pricings {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 30px;
     }
 
     .pricing-block {
@@ -186,9 +187,9 @@ ul{
     }
 
     .pricings {
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .pricing-block {
