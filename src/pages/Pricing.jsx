@@ -37,7 +37,7 @@ const Pricing = () => {
                                 <span style={{fontSize:'40px', fontWeight:'600', color:'#5B0C4E'}}>0.00</span>
                                 <span>/month</span>
                             </div>
-                            <button className="btn" onClick={handleGetStarted} > Get Started </button>
+                            <button className="btn" onClick={()=>navigate("/contact-us?plan=starter")} > Get Started </button>
                             <ul >
                                 <b>Features</b>
                                 <li>Add up to 3 users</li>
@@ -62,7 +62,7 @@ const Pricing = () => {
                                 <span style={{fontSize:'40px', fontWeight:'600', color:'#5B0C4E'}}>99.99</span>
                                 <span>/month</span>
                             </div>
-                            <button className="btn-color" onClick={handleStartGrowing} > Start Growing </button>
+                            <button className="btn-color" onClick={()=>navigate("/contact-us?plan=growth")} > Start Growing </button>
                             <ul >
                                 <b>Includes everything in the starter, plus:</b>
                                 <li>Add up to 7 users</li>
@@ -87,7 +87,7 @@ const Pricing = () => {
                                 <span style={{fontSize:'40px', fontWeight:'600', color:'#5B0C4E'}}>199.99</span>
                                 <span>/month</span>
                             </div>
-                            <button className="btn" onClick={handleStartGrowing}> Start Growing </button>
+                            <button className="btn" onClick={()=>navigate("/contact-us?plan=enterprise")}> Start Growing </button>
                             <ul >
                                 <b>Includes everything in the growth, plus:</b>
                                 <li>Add up to 15 users</li>
@@ -111,7 +111,7 @@ const Pricing = () => {
                                 <span>$</span>
                                 <span style={{fontSize:'40px', fontWeight:'600', color:'#5B0C4E'}}>Custom</span>
                             </div>
-                            <button className="btn-color" onClick={()=>navigate("/contact-us")} > Get Custom Quote </button>
+                            <button className="btn-color" onClick={()=>navigate("/contact-us?plan=custom")} > Get Custom Quote </button>
                             <ul >
                                 <b>Everything you need:</b>
                                 <li>Unlimited users</li>

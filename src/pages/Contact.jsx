@@ -3,15 +3,19 @@ import '../styles/contactStyles.css'
 import contact from '../assets/contact.png'
 import Header from "../components/Header";
 import contactFooter from '../assets/contact-footer.png'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 const Contact = () => {
 
     const navigate = useNavigate()
+    const [searchParams] = useSearchParams()
+    const pricingPlan = searchParams.get('plan') || null
+    
     const [info ,setInfo] = useState({
         name:"",
         message:'',
         phone:'',
-        email:''
+        email:'',
+        plan: pricingPlan || ''
     })
 
     async function sendMessage(e){
@@ -52,6 +56,11 @@ const Contact = () => {
                     <div style={{textAlign:'center'}}>
                         <h1 className="contact-title">Contact Us</h1>
                         <p style={{padding:5}}>For inquiries, support, or more information about Projina, feel free to get in touch with our team.</p>
+                        {pricingPlan && (
+                            <div style={{padding:'15px', backgroundColor:'#f0f0f0', borderRadius:'8px', marginTop:'15px', color:'#5B0C4E', fontWeight:'500'}}>
+                                You are interested in the <strong>{pricingPlan.charAt(0).toUpperCase() + pricingPlan.slice(1)}</strong> plan
+                            </div>
+                        )}
                     </div>
 
                     <div className="contact-block">
