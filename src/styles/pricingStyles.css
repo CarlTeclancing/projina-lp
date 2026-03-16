@@ -6,13 +6,13 @@
 }
 
 .pricing-container{
-    width: fit-content;
+    width: 100%;
     margin: auto;
-    padding:100px 0px;
+    padding:100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1400px;
     gap:100px;
 }
 
@@ -48,10 +48,13 @@ b{
 
 .pricings{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-    max-width: 700px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 280px);
+    gap: 80px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    align-items: start;
+    justify-content: center;
 }
 
 .custom-pricing-container {
@@ -67,11 +70,13 @@ b{
     border: solid 1px rgb(200,200,200);
     background-color: rgb(250,250,250);
     border-radius: 10px;
-    padding:20px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap:10px;
-    min-width: 280px;
+    gap: 12px;
+    width: 280px;
+    height: 100%;
+    min-height: 520px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -128,25 +133,77 @@ ul{
     line-height: 200%;
 }
 
-@media only screen and (max-width:500px){
-    .pricing-container{
-        padding:50px 0px;
-        max-width: 500px;
-        font-size: small;
+@media only screen and (max-width: 1200px) {
+    .pricings {
+        grid-template-columns: repeat(2, 280px);
+        gap: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pricing-container {
+        padding: 50px 15px;
+        max-width: 100%;
+        gap: 50px;
     }
 
-    .pricing-header{        
-        padding:0px 50px;
+    .pricing-header {
+        padding: 0px 20px;
+    }
+
+    .pricing-title {
+        font-size: 40px;
+    }
+
+    .pricings {
+        grid-template-columns: 280px;
+        gap: 40px;
+    }
+
+    .pricing-block {
+        min-height: auto;
+    }
+
+    .pricing-block ul {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .pricing-container {
+        padding: 50px 10px;
+        max-width: 100%;
+        font-size: small;
+        gap: 30px;
+    }
+
+    .pricing-header {        
+        padding: 0px 15px;
         flex-wrap: wrap;
     }
-    .pricing-title{
-        font-size: 30px;
+    
+    .pricing-title {
+        font-size: 28px;
     }
 
-    .pricings{
-        display: flex;
-        gap:20px;
-        flex-direction: column;
+    .pricings {
+        display: grid;
+        grid-template-columns: 280px;
+        gap: 25px;
+    }
+
+    .pricing-block {
+        min-width: 280px;
+        padding: 15px;
+        min-height: auto;
+    }
+
+    .pricing-block h3 {
+        font-size: 18px;
+    }
+
+    .pricing-block ul {
+        font-size: 12px;
     }
 
     .custom-pricing-container {
