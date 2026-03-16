@@ -24,7 +24,6 @@
     text-align: center;
     color: black;
 }
-<<<<<<< HEAD
 .pricing-header span {
     display: flex;
     gap: 10px;
@@ -32,8 +31,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-=======
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
 .pricing-title{
     font-size: 60px;
     font-weight: 600;
@@ -58,19 +55,11 @@ b{
 
 .pricings{
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-=======
-    grid-template-columns: repeat(3, 280px);
-    gap: 80px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
     align-items: start;
     justify-content: center;
 }
@@ -153,20 +142,14 @@ ul{
 
 @media only screen and (max-width: 1200px) {
     .pricings {
-<<<<<<< HEAD
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 32px;
         padding: 0 5px;
-=======
-        grid-template-columns: repeat(2, 280px);
-        gap: 80px;
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
     }
 }
 
 @media only screen and (max-width: 768px) {
     .pricing-container {
-<<<<<<< HEAD
         padding: 40px 5px;
         max-width: 100%;
         gap: 32px;
@@ -192,27 +175,6 @@ ul{
         max-width: 400px;
         margin: 0 auto;
         padding: 15px;
-=======
-        padding: 50px 15px;
-        max-width: 100%;
-        gap: 50px;
-    }
-
-    .pricing-header {
-        padding: 0px 20px;
-    }
-
-    .pricing-title {
-        font-size: 40px;
-    }
-
-    .pricings {
-        grid-template-columns: 280px;
-        gap: 40px;
-    }
-
-    .pricing-block {
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
         min-height: auto;
     }
 
@@ -255,7 +217,8 @@ ul{
 
     .pricings {
         display: grid;
-<<<<<<< HEAD
+    .pricings {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
         justify-items: center;
@@ -277,24 +240,6 @@ ul{
     }
 }
 /* Removed duplicate and invalid closing bracket */
-=======
-        grid-template-columns: 280px;
-        gap: 25px;
-    }
-
-    .pricing-block {
-        min-width: 280px;
-        padding: 15px;
-        min-height: auto;
-    }
-
-    .pricing-block h3 {
-        font-size: 18px;
-    }
-
-    .pricing-block ul {
-        font-size: 12px;
-    }
 
     .custom-pricing-container {
         display: flex;

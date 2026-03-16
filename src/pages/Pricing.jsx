@@ -8,19 +8,11 @@ const Pricing = () => {
     const navigate = useNavigate()
     
     const handleGetStarted = () => {
-<<<<<<< HEAD
         window.location.href = "https://crms.projina.top/public/register";
     }
 
     const handleStartGrowing = () => {
         window.location.href = "https://crms.projina.top/public/register";
-=======
-        navigate("/contact-us");
-    }
-
-    const handleStartGrowing = () => {
-        navigate("/contact-us");
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
     }
 
     return(
@@ -32,11 +24,7 @@ const Pricing = () => {
                         <div>You can monitor all your clients, projects, task, schedule meetings,  distribute files and manage inventory,finances and more in one place.</div>
                         <span>
                             <button className="btn-color" onClick={handleGetStarted}>Sign up for free</button>&nbsp;&nbsp;&nbsp;
-<<<<<<< HEAD
-                            <button className="btn" onClick={()=>navigate("/register")} >Contact sales</button>
-=======
-                            <button className="btn" onClick={()=>navigate("/contact-us")} >Contact sales</button>
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
+                            <button className="btn" onClick={()=>window.location.href="https://crms.projina.top/public/register"} >Contact sales</button>
                         </span>
                     </div>
 
@@ -80,9 +68,6 @@ const Pricing = () => {
                             </div>
 <<<<<<< HEAD
                             <button className="btn-color" onClick={()=>window.location.href="https://crms.projina.top/public/register?plan=growth"} > Start Growing </button>
-=======
-                            <button className="btn-color" onClick={()=>navigate("/contact-us?plan=growth")} > Start Growing </button>
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
                             <ul >
                                 <b>Includes everything in the starter, plus:</b>
                                 <li>Add up to 7 users</li>
@@ -109,9 +94,6 @@ const Pricing = () => {
                             </div>
 <<<<<<< HEAD
                             <button className="btn" onClick={()=>window.location.href="https://crms.projina.top/public/register?plan=enterprise"}> Start Growing </button>
-=======
-                            <button className="btn" onClick={()=>navigate("/contact-us?plan=enterprise")}> Start Growing </button>
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
                             <ul >
                                 <b>Includes everything in the growth, plus:</b>
                                 <li>Add up to 15 users</li>
@@ -137,9 +119,6 @@ const Pricing = () => {
                             </div>
 <<<<<<< HEAD
                             <button className="btn-color" onClick={()=>window.location.href="https://crms.projina.top/public/register?plan=custom"} > Get Custom Quote </button>
-=======
-                            <button className="btn-color" onClick={()=>navigate("/contact-us?plan=custom")} > Get Custom Quote </button>
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
                             <ul >
                                 <b>Everything you need:</b>
                                 <li>Unlimited users</li>
