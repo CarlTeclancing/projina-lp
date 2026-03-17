@@ -221,26 +221,3 @@
         min-width: 100px;
     } 
 }
-
-@media only screen and (max-width: 768px) {
-    .mobile-app-section {
-        padding: 20px;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .mobile-app-section p {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    .app-download-buttons {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .app-btn {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-}
