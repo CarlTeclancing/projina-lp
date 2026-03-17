@@ -43,8 +43,8 @@ const Header = () => {
         </div>
 
         <div className={'headerLinks'}>
-          <span className={location.pathname === '/home' ? 'active-link' : ''}>
-            <Link to="/home">Home</Link>
+          <span className={location.pathname === '/' ? 'active-link' : ''}>
+            <Link to="/">Home</Link>
           </span>
 
           <span
@@ -98,8 +98,8 @@ const Header = () => {
       {/* Mobile menu */}
       <div className={showMenu ? 'mobile-menu mobile-menu-open' : 'mobile-menu'}>
         <div className="mobile-link-container">
-          <span className={location.pathname === '/home' ? 'active-link' : ''}>
-            <Link to="/home" onClick={() => closeMenu()}>
+          <span className={location.pathname === '/' ? 'active-link' : ''}>
+            <Link to="/" onClick={() => closeMenu()}>
               Home
             </Link>
           </span>

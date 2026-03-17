@@ -62,6 +62,7 @@ b{
     padding: 0 10px;
     align-items: start;
     justify-content: center;
+    max-width: 900px;
 }
 
 .custom-pricing-container {
