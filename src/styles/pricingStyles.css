@@ -185,7 +185,6 @@ ul{
 
 @media only screen and (max-width: 500px) {
     .pricing-container {
-<<<<<<< HEAD
         padding: 30px 2px;
         max-width: 100%;
         font-size: small;
@@ -194,29 +193,18 @@ ul{
 
     .pricing-header {        
         padding: 0px 5px;
-=======
-        padding: 50px 10px;
-        max-width: 100%;
-        font-size: small;
         gap: 30px;
     }
 
     .pricing-header {        
-        padding: 0px 15px;
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
+        padding: 0px 5px;
         flex-wrap: wrap;
     }
     
     .pricing-title {
-<<<<<<< HEAD
         font-size: 22px;
-=======
-        font-size: 28px;
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
     }
 
-    .pricings {
-        display: grid;
     .pricings {
         display: grid;
         grid-template-columns: 1fr;
@@ -240,29 +228,3 @@ ul{
     }
 }
 /* Removed duplicate and invalid closing bracket */
-
-    .custom-pricing-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .pricing-block{
-        border: solid 1px rgb(200,200,200);
-        background-color: rgb(250,250,250);
-        border-radius: 10px;
-        padding:10px;
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-        min-width: auto;
-    }
-    .growth-block{
-        border: solid 1px #5B0C4E;
-    }
-
-    .custom-pricing-block {
-        border: solid 2px #5B0C4E !important;
-    }
-
-}
->>>>>>> ba7da4dec156a35b2bf758a43b3f845acfb9ee2c
