@@ -166,7 +166,7 @@ ul{
 
     .pricings {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 40px;
         justify-items: center;
         padding: 0 0px;
     }
