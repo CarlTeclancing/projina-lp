@@ -1,0 +1,155 @@
+.header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border:solid 1px red; */
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: italic;
+    color: #5B0C4E;
+}
+
+
+.headerLinks{
+    display: flex;
+    gap:25px;
+    color: rgb(10,10,10);
+}
+
+.headerLinks a{
+    color: rgb(10,10,10);
+    transition:all 0.2s ease-in-out;
+    border-bottom:solid 0px grey;
+}
+
+.headerLinks a:hover{
+    color: rgba(91, 12, 78 ,0.5);
+    border-bottom:solid 1px rgba(91, 12, 78 ,0.5);
+
+}
+
+.headerBtns{
+    display: flex;
+    gap: 20px;
+}
+
+.active-link a{
+    color: #5B0C4E;
+    text-shadow: 3px 3px 15px rgba(91, 12, 78 ,0.5);
+    /* font-weight: 600; */
+}
+
+.hide-product{
+    position:absolute ;
+    /* border:solid 1px red ; */
+    width:100% ;
+    background-color:white ;
+    z-index:1;
+    max-height: 0px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.show-product{
+    max-height: 400px;
+}
+
+.mobile-login{
+    display: none;
+}
+.menu-bar{
+    display: none;
+    border: solid 1px rgba(0,0,0,0.1);
+    padding:5px 10px;
+    border-radius: 5px;
+}
+.mobile-menu{
+    /* display: none; */
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-height: 0px;
+
+    transition: all 0.5s ease-in-out;
+}
+.mobile-link-container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.mobile-link-container span{
+    padding: 10px 20px;
+    border-bottom: solid 1px rgba(0,0,0 ,0.1);
+}
+.mobile-menu-footer{
+    display: flex;
+    gap:20px;
+    font-size: small;
+    color: darkmagenta;
+    /* border: solid px red; */
+    margin: auto;
+}
+
+.mobile-menu-open{
+    max-height: 90vh;
+}
+
+@media only screen and (max-width:500px) {
+    .header{
+        font-size: small;
+        width: 93%;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 20px;
+        font-weight: 600;
+        max-width: 130px;
+    }
+    .logo img{
+        width: 22px;
+        height: 22px;
+        margin-right: 3px;
+    }
+
+    .headerLinks{
+        display: none;
+    }
+
+    .headerBtns{
+        display: none;
+    }
+
+    .mobile-login{
+        display: block;
+        border: solid 1px #5B0C4E;
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+    .menu-bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: x-large;
+    }
+
+}
