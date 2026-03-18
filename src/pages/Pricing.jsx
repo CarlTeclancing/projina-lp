@@ -113,7 +113,6 @@ const Pricing = () => {
                             </div>
                             <button className="btn-color" onClick={()=>window.location.href="https://crms.projina.top/public/register?plan=custom"} > Get Custom Quote </button>
                             <ul >
-                                <b>Everything you need:</b>
                                 <li>Unlimited users</li>
                                 <li>Unlimited clients</li>
                                 <li>Unlimited projects</li>
