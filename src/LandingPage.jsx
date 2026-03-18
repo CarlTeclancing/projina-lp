@@ -47,8 +47,8 @@ const LandingPage = () => {
             </div>
 
 
-            <div className={styles.dashboard}>
-                <img src={dashboard} width={'100%'} />
+            <div className={styles.dashboardScreenshot}>
+                <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardScreenshotImg} />
             </div>
 
             <div className={styles.servicesContainer}>

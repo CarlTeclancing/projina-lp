@@ -22,8 +22,8 @@ const Footer = () =>{
                 </div>
             </div>
 
-            <div className={styles.dashboard} style={{height:250}}>
-                <img src={dashboard}  />
+            <div className={styles.dashboardFooterHalf}>
+                <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardFooterHalfImg} />
             </div>
 
 
