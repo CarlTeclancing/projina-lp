@@ -47,8 +47,8 @@ const LandingPage = () => {
             </div>
 
 
-            <div className={styles.dashboard}>
-                <img src={dashboard} width={'100%'} />
+            <div className={styles.dashboardScreenshot}>
+                <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardScreenshotImg} />
             </div>
 
             <div className={styles.servicesContainer}>
@@ -66,16 +66,14 @@ const LandingPage = () => {
 
                 <div className={styles.section1Block}> 
 
-                     <div>
-                        <img src={sec2Img} style={{ objectFit:'contain'}} width={'400px'} height={'350px'} />
-                    </div>
-
                     <div style={{width:'325px'}}>
                         <h3>Finance Tracking & Categorizing</h3>
                         <p>Track your company’s income and expenses with automatic categorization by department, project, or expense type. Get real-time insights to improve budgeting and cut unnecessary costs.</p>
                     </div>
 
-                   
+                    <div>
+                        <img src={sec2Img} style={{ objectFit:'contain'}} width={'400px'} height={'350px'} />
+                    </div>
                 </div>
 
                 <div className={styles.section1Block}>
