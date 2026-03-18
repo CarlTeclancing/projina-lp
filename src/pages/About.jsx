@@ -16,8 +16,8 @@ const About = () => {
                 <span className="about-title">About Us</span>
                 <div style={{textAlign:'center'}}>Projina is an all-in-one company management system built to simplify operations and empower businesses of every size.</div>
 
-                <div className={styles.dashboard}>
-                    <img src={aboutImg1}  />
+                <div className={styles.dashboardScreenshot}>
+                    <img src={aboutImg1} alt="Dashboard Screenshot" className={styles.dashboardScreenshotImg} />
                 </div>
 
                 <div style={{backgroundColor:'white' ,borderRadius:10 ,padding:30}} >

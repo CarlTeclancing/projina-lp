@@ -22,10 +22,30 @@ const TermsAndConditions = () => {
         navigate("/");
     };
 
+    // Navigation tab labels
+    const tabLabels = [
+        "Terms & Conditions",
+        "Privacy Policy",
+        "Refund Policy",
+        "Cancellation Policy"
+    ];
+
     return (
         <div className="terms-page-wrapper">
             <div className="terms-container">
                 <div className="terms-content">
+                    {/* Navigation Tabs */}
+                    <div className="terms-tabs">
+                        {tabLabels.map((label, idx) => (
+                            <button
+                                key={label}
+                                className={`terms-tab${currentPage === idx + 1 ? ' active' : ''}`}
+                                onClick={() => setCurrentPage(idx + 1)}
+                            >
+                                {label}
+                            </button>
+                        ))}
+                    </div>
                     {currentPage === 1 && (
                         <div className="terms-page">
                             <h1>Terms and Conditions</h1>
