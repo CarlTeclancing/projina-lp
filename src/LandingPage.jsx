@@ -46,6 +46,7 @@ const LandingPage = () => {
                 </div>
             </div>
 
+
             <div className={styles.dashboard}>
                 <img src={dashboard} width={'100%'} />
             </div>
@@ -173,19 +174,6 @@ const LandingPage = () => {
 
 
             </div>
-
-            {/* <div className={styles.trySection}>
-                <h1>Try us for <span style={{color:'#EA5254'}}>Free</span></h1>
-            
-                <div style={{display:'flex' ,gap:20}}>
-                    <button style={{border:'solid 1px rgb(175,175,175)'}}>Contact Sales</button>
-                    <button style={{color:'white' ,backgroundColor:'#5B0C4E'}} >Sign up for free</button>
-                </div>
-            </div>
-
-            <div className={styles.dashboard} style={{height:350}}>
-                <img src={dashboard} width={'1246px'}  />
-            </div> */}
 
                         
             {/* <Footer/> */}
