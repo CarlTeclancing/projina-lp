@@ -166,27 +166,116 @@
 }
 
 @media (max-width: 768px) {
+    .terms-container {
+        padding: 20px 10px;
+    }
+
     .terms-content {
         padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .terms-page {
+        min-height: 400px;
     }
 
     .terms-page h1 {
         font-size: 24px;
     }
 
+    .terms-section h2 {
+        font-size: 14px;
+    }
+
+    .terms-section p,
+    .terms-section li {
+        font-size: 14px;
+    }
+
     .terms-footer {
         flex-direction: column;
+        gap: 20px;
     }
 
     .terms-navigation {
         width: 100%;
         flex-direction: column;
+        gap: 10px;
     }
 
     .btn-nav,
     .btn-nav-next,
     .btn-agree {
         width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .terms-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .terms-tab {
+        font-size: 14px;
+        padding: 8px 12px;
+        min-width: 120px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-container {
+        padding: 10px 5px;
+    }
+
+    .terms-content {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+
+    .terms-page h1 {
+        font-size: 20px;
+    }
+
+    .terms-label {
+        font-size: 12px;
+    }
+
+    .terms-section {
+        gap: 8px;
+    }
+
+    .terms-section h2 {
+        font-size: 13px;
+    }
+
+    .terms-section p,
+    .terms-section li {
+        font-size: 13px;
+    }
+
+    .terms-progress {
+        margin: 20px 0;
+    }
+
+    .terms-tabs {
+        gap: 6px;
+        margin-bottom: 24px;
+    }
+
+    .terms-tab {
+        font-size: 12px;
+        padding: 6px 10px;
+        min-width: 100px;
+    }
+
+    .btn-nav,
+    .btn-nav-next,
+    .btn-agree {
+        padding: 10px;
+        font-size: 14px;
     }
 }
 
