@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: projina-lp
+    env: node
+    plan: free
+    buildCommand: npm ci --production=false && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_APP_NAME
+        value: projina
+    routes:
+      - path: "/(.*)"
+        destination: /index.html
+
