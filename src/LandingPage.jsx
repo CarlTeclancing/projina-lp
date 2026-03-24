@@ -2,7 +2,7 @@ import React ,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles/landingStyles.module.css'
 
-import dashboard from './assets/dashboard.png'
+import dashboard from './assets/dashboard/dashboardTeams.png'
 import star1 from './assets/star1.png'
 import star2 from './assets/star2.png'
 import star3 from './assets/star3.png'

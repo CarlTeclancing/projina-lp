@@ -3,12 +3,11 @@ import '../styles/footerStyles.css'
 import styles from '../styles/landingStyles.module.css'
 
 import iconWhite from '../assets/icon-white.png'
-import dashboard from '../assets/dashboard.png'
 import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaInstagram, FaApple } from "react-icons/fa";
 import { FaGooglePlay } from "react-icons/fa";
 
-const Footer = () =>{
+const Footer = ({dashboardImage}) =>{
     const navigate = useNavigate()
     return(
         <React.Fragment>
@@ -23,7 +22,7 @@ const Footer = () =>{
             </div>
 
             <div className={styles.dashboardFooterHalf}>
-                <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardFooterHalfImg} />
+                <img src={dashboardImage} alt="Dashboard Screenshot" className={styles.dashboardFooterHalfImg} />
             </div>
 
 

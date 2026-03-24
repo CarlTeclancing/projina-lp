@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../styles/solutionStyles.css'
-import dashboard from '../assets/solutionDashboard.png'
+import dashboard from '../assets/dashboard/dashboardTaskBoard.png'
 
 import styles from '../styles/landingStyles.module.css'
 import sol1 from '../assets/sol1.jpg'
