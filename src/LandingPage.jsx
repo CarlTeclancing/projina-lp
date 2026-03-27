@@ -157,7 +157,16 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div>
-                    <video src="" type="video/mp4" controls className={styles.section2Video} />
+                    <video
+                        controls
+                        className={styles.section2Video}
+                    >
+                        <source
+                            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                            type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
 
