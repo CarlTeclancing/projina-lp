@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React ,{useState, useEffect} from "react";
 import '../styles/contactStyles.css'
 import contact from '../assets/contact.png'
 import Header from "../components/Header";
@@ -10,6 +10,10 @@ const Contact = () => {
     const [searchParams] = useSearchParams()
     const pricingPlan = searchParams.get('plan') || null
     
+    // ── Scroll to top on mount ──
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [info ,setInfo] = useState({
         name:"",
         message:'',
@@ -21,9 +25,7 @@ const Contact = () => {
     async function sendMessage(e){
         e.preventDefault()
         try{
-            const {name ,message, phone ,email} = info
-
-            const response = await fetch('http://localhost:5000/v1/api/contact' ,{
+            await fetch('http://localhost:5000/v1/api/contact' ,{
                 method:'post',
                 headers:{
                     'content-type':'application/json'

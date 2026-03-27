@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/termsStyles.css';
 
 const TermsAndConditions = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const navigate = useNavigate();
+
+    // ── Scroll to top on mount ──
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleNext = () => {
         if (currentPage < 4) {

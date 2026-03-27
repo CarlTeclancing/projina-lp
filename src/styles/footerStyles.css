@@ -1,223 +1,373 @@
-.footer{
-    width:100% ;
-    height:auto ;
-    background-color:#5B0C4E;
+/* ═══════════════════════════════════════════
+   FOOTER — PROJINA  |  Fully Fixed
+═══════════════════════════════════════════ */
+
+/* ── Try section ── */
+.try-section {
+    text-align: center;
+    padding: 64px 24px 40px;
+    background: #f8f7fa;
+}
+.try-section h1 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #1a1a2e;
+}
+.try-section-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.try-section-btns button {
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.try-section-btns button:hover { transform: translateY(-2px); }
+
+/* ── Dashboard half image ── */
+.dashboard-footer-half {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #f8f7fa;
+    padding: 0 24px;
+}
+.dashboard-footer-half-img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    max-height: 420px;
+    box-shadow: 0 -8px 40px rgba(91,12,78,0.15);
+}
+
+/* ════════════════════════════
+   MAIN FOOTER SHELL
+════════════════════════════ */
+.footer {
+    width: 100%;
+    background-color: #5B0C4E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(175,175,175);
+    font-size: 0.875rem;
+    padding: 48px 24px 0;
+    box-sizing: border-box;
+}
+
+/* ── Top row: brand + 4 link columns ── */
+.footer-container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    /* brand column is wider; 4 link columns share the rest equally */
+    grid-template-columns: 260px repeat(4, 1fr);
+    gap: 32px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    box-sizing: border-box;
+    align-items: start;
+}
+
+/* Brand block */
+.first-block {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap:10px;
+    gap: 8px;
+}
+
+.footer-company {
+    font-size: 1.9rem;
+    font-style: italic;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.footer-desc {
     color: rgb(175,175,175);
-    font-size: smaller;
-    padding: 40px 0;
+    line-height: 1.75;
+    font-size: 0.84rem;
 }
 
-.footer-container{
-    max-width: 950px;
-    min-width:950px;
+.social {
     display: flex;
-    gap:40px;
-    padding:20px;
-    justify-content: space-between;
-    border-bottom: solid 1px grey;
-    margin:20px auto;
+    gap: 12px;
+    align-items: center;
 }
-.footer-container-sub1{
-    display: flex;
-    gap:40px;
-    padding:20px;
-    justify-content: space-between;
-    /* border: solid 1px red; */
-}
+.social svg { cursor: pointer; opacity: 0.8; transition: opacity 0.2s; }
+.social svg:hover { opacity: 1; }
 
-.mobile-app-section {
-    padding: 20px;
+/* ── Individual link column ── */
+.footer-col {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-left: 20px;
+    gap: 10px;         /* space between every item in the column */
 }
 
-.mobile-app-section p {
+.footer-block-title {
+    color: white;
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Each link/text item sits on its OWN line thanks to flex-direction: column */
+.footer-col-link {
+    display: block;          /* <-- key: forces each item to its own line */
     color: rgb(175,175,175);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    line-height: 1.5;
+}
+.footer-col-link:hover { color: white; }
+
+.footer-col-highlight {
+    display: block;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-col-item {
+    display: block;
+    color: rgb(175,175,175);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Quick links list */
+.footer-links {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-links li {
+    display: block;
+    color: rgb(175,175,175);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-links li:hover { color: white; }
+
+/* ── Bottom row: app badges + newsletter ── */
+.footer-bottom-row {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    box-sizing: border-box;
+    align-items: start;
 }
 
-.app-download-buttons {
+.footer-extras-col {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-extras-desc {
+    color: rgb(175,175,175);
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Store badges ── */
+.store-badges-row {
+    display: flex;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.app-btn {
+.store-badge {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 15px;
-    background-color: white;
-    border: none;
-    border-radius: 8px;
+    background: #000;          /* classic black pill, like the real badges */
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 10px 18px;
+    text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    color: black;
-    font-weight: 500;
+    transition: transform 0.15s, box-shadow 0.15s;
+    min-width: 148px;
 }
-
-.app-btn:hover {
+.store-badge:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
-.footer-logo{
+.store-badge-icon {
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
-    gap:5px;
+    justify-content: center;
+    flex-shrink: 0;
 }
-.footer-company{
-    font-size: 40px;
-    font-style: italic;
+.store-badge-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.footer-block{
-    padding: 5px;
-    line-height: 200%;
+.store-badge-text {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    line-height: 1.2;
+}
+.store-badge-sub {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+}
+.store-badge-name {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #fff;
 }
 
-.first-block{
-    line-height: 150%;
-    gap:30px;
-    max-width:250px;
-}
-.social{
+/* ── Newsletter ── */
+.newsletter-row {
     display: flex;
-    gap:10px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-
-
-.footer-block-title{
-    color: white;
-    font-weight: bold;
-}
-
-.footer-end{
-    display: flex;
-    justify-content: space-between;
-    min-width: 900px;
-    /* border:solid 1px red; */
-}
-
-.footer-end-left{
-    display: flex;
-    gap:10px;
-}
-
-.input{
-    min-width: 250px;
-    background-color: transparent;
+.footer-input {
+    flex: 1;
+    min-width: 180px;
+    background: transparent;
     border-radius: 10px;
-    padding:10px;
-    border:solid 1px grey;
+    padding: 11px 14px;
+    border: 1px solid rgba(255,255,255,0.3);
     color: white;
     outline: none;
+    font-size: 0.875rem;
+    transition: border-color 0.2s;
 }
+.footer-input:focus { border-color: rgba(255,255,255,0.65); }
+.footer-input::placeholder { color: rgba(255,255,255,0.38); }
 
-.newsletter-section button {
-    background-color: white;
+.newsletter-btn {
+    background: white;
     color: #5B0C4E;
     border: none;
-    border-radius: 8px;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 600;
+    border-radius: 10px;
+    padding: 11px 22px;
+    font-size: 0.875rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    white-space: nowrap;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.newsletter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+
+/* ── Copyright bar ── */
+.footer-end {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 24px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    flex-wrap: wrap;
+    gap: 10px;
+    box-sizing: border-box;
+}
+.footer-end-left {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.footer-end-left span {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.footer-end-left span:hover { color: white; }
+
+/* ════════════════════════════
+   TABLET  ≤ 1024px
+════════════════════════════ */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+    .first-block {
+        grid-column: 1 / -1;   /* brand spans full width */
+    }
+    .footer-bottom-row {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .dashboard-footer-half-img { max-height: 340px; }
 }
 
-.newsletter-section button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+/* ════════════════════════════
+   MOBILE  ≤ 768px
+════════════════════════════ */
+@media (max-width: 768px) {
+    .footer { padding: 40px 16px 0; }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    .first-block {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom-row { gap: 28px; }
+
+    .store-badges-row { flex-direction: column; }
+    .store-badge { min-width: 0; width: 100%; }
+
+    .newsletter-row { flex-direction: column; }
+    .footer-input { min-width: 0; width: 100%; }
+    .newsletter-btn { width: 100%; }
+
+    .footer-end { flex-direction: column; align-items: flex-start; }
+    .footer-end-left { gap: 12px; }
+
+    .dashboard-footer-half-img { max-height: 240px; border-radius: 12px 12px 0 0; }
+    .try-section { padding: 48px 16px 32px; }
 }
 
-@media only screen and (max-width:500px) {
-   .footer{
-       background-color:#5B0C4E;
-       display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap:10px;
-        color: rgb(175,175,175);
-        
-        width:none ;
-        max-width: 500px;
-        font-size: small;
-        height:max-content;
-    }
-
-    .footer-container{
-        display: flex;
-        gap:40px;
-        justify-content: space-between;
-        border-bottom: solid 1px grey;
-        margin:20px auto;
-        
-        padding:0px;
-        flex-direction: column;
-        min-width:none;
-        max-width:none;
-    }
-    .footer-container-sub1{
-
-        padding:0px 20px;
-        flex-direction: column;
-        /* border: solid 1px red; */
-        max-width: 500px;
-    }
-
-
-    .footer-logo{
-        display: flex;
-        align-items: center;
-        gap:5px;
-    }
-    .footer-company{
-        font-size: 40px;
-        font-style: italic;
-    }
-
-    .footer-block{
-        margin: 0px 50px;
-        width: 150px;;
-    }
-
-    .first-block{
-        gap:30px;
-        width:300px;
-        margin: 0px 50px;
-    }
-
-    .footer-end{
-        gap: 15px;
-        text-align: left;
-        width: fit-content;
-        margin: auto;
-        justify-content: space-evenly;
-        min-width: none;
-        flex-direction: column;
-        padding: 10px;
-        flex-wrap: wrap;
-    }
-
-    .footer-end-left{
-        gap:10px;
-        font-size: x-small;
-    }
-
-    .input{
-        min-width: 100px;
-    } 
+/* ════════════════════════════
+   SMALL PHONE  ≤ 480px
+════════════════════════════ */
+@media (max-width: 480px) {
+    .footer-container { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .footer-end-left { font-size: 0.72rem; gap: 10px; }
+    .footer-company { font-size: 1.5rem; }
 }

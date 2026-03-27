@@ -1,0 +1,126 @@
+/* ═══════════════════════════════════════════
+   CAREER — PROJINA  |  Fully Responsive
+═══════════════════════════════════════════ */
+:root {
+    --brand-purple:#5B0C4E; --brand-coral:#EA5254;
+    --brand-purple-light:#f5edf3; --brand-coral-light:#fdf0f0;
+    --surface:#ffffff; --surface-2:#f8f7fa;
+    --text-primary:#1a1a2e; --text-secondary:#5a5a72; --text-muted:#9898aa;
+    --border:#ebebf0;
+    --shadow-sm:0 2px 8px rgba(91,12,78,0.06);
+    --shadow-md:0 8px 32px rgba(91,12,78,0.1);
+    --shadow-lg:0 20px 60px rgba(91,12,78,0.14);
+    --radius-md:16px; --radius-lg:24px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+.car-root{background:var(--surface-2);min-height:100vh;position:relative;overflow-x:hidden;color:var(--text-primary);width:100%;}
+.car-blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:0.07;pointer-events:none;z-index:0;}
+.car-blob-1{width:500px;height:500px;background:var(--brand-purple);top:-200px;right:-150px;}
+.car-blob-2{width:400px;height:400px;background:var(--brand-coral);bottom:-150px;left:-100px;}
+
+/* HERO */
+.car-hero{position:relative;z-index:1;background:linear-gradient(150deg,#1a1a2e 0%,#2d0a26 100%);padding:88px 20px 72px;text-align:center;}
+.car-hero-inner{max-width:660px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px;}
+.car-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(234,82,84,0.2);color:#ffb3b4;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:100px;border:1px solid rgba(234,82,84,0.3);}
+.car-badge::before{content:'';width:7px;height:7px;background:#EA5254;border-radius:50%;box-shadow:0 0 0 3px rgba(234,82,84,0.25);animation:pulse-dot 1.6s ease-in-out infinite;}
+@keyframes pulse-dot{0%,100%{transform:scale(1)}50%{transform:scale(1.4)}}
+.car-hero-title{font-size:clamp(2rem,6vw,3.3rem);font-weight:800;line-height:1.1;color:#fff;letter-spacing:-0.02em;}
+.car-accent{color:#EA5254;}
+.car-hero-sub{font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.75;max-width:480px;}
+
+/* SHARED SECTION */
+.car-section-inner{max-width:1200px;margin:0 auto;text-align:center;}
+.car-section-label{margin-bottom:13px;}
+.car-section-label span{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand-coral);background:var(--brand-coral-light);padding:5px 12px;border-radius:100px;border:1px solid rgba(234,82,84,0.15);}
+.car-section-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:11px;}
+.car-section-sub{font-size:1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:40px;max-width:500px;margin-left:auto;margin-right:auto;}
+
+/* VALUES */
+.car-values-section{position:relative;z-index:1;padding:72px 20px;background:var(--surface);border-bottom:1.5px solid var(--border);}
+.car-values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left;}
+.car-value-card{padding:28px 24px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:var(--radius-md);transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;}
+.car-value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(91,12,78,0.2);}
+.car-value-icon{width:50px;height:50px;background:var(--brand-purple-light);color:var(--brand-purple);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:transform 0.2s,background 0.2s;}
+.car-value-card:hover .car-value-icon{transform:scale(1.08) rotate(-4deg);background:var(--brand-purple);color:#fff;}
+.car-value-title{font-size:0.98rem;font-weight:700;color:var(--text-primary);margin-bottom:7px;}
+.car-value-desc{font-size:0.85rem;color:var(--text-secondary);line-height:1.7;}
+
+/* PERKS */
+.car-perks-section{position:relative;z-index:1;padding:72px 20px;background:var(--surface-2);}
+.car-perks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.car-perk-card{display:flex;flex-direction:column;gap:9px;padding:24px 22px;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-md);transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;}
+.car-perk-card:hover{border-color:rgba(91,12,78,0.25);box-shadow:var(--shadow-sm);transform:translateY(-2px);}
+.car-perk-icon{width:46px;height:46px;background:var(--brand-purple-light);color:var(--brand-purple);border-radius:12px;display:flex;align-items:center;justify-content:center;}
+.car-perk-title{font-size:0.95rem;font-weight:700;color:var(--text-primary);}
+.car-perk-desc{font-size:0.84rem;color:var(--text-secondary);line-height:1.7;}
+
+/* JOBS */
+.car-jobs-section{position:relative;z-index:1;padding:72px 20px;background:var(--surface);text-align:center;}
+.car-jobs-list{display:flex;flex-direction:column;gap:14px;text-align:left;}
+.car-job-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:24px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;}
+.car-job-card:hover{border-color:var(--brand-purple);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+.car-job-left{display:flex;gap:16px;align-items:flex-start;flex:1;min-width:0;}
+.car-job-icon{width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.car-job-info{flex:1;min-width:0;}
+.car-job-dept{display:block;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;}
+.car-job-title{font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:7px;}
+.car-job-desc{font-size:0.85rem;color:var(--text-secondary);line-height:1.7;margin-bottom:10px;}
+.car-job-meta{display:flex;gap:16px;margin-bottom:10px;flex-wrap:wrap;}
+.car-job-meta span{display:inline-flex;align-items:center;gap:5px;font-size:0.78rem;color:var(--text-muted);font-weight:500;}
+.car-job-tags{display:flex;gap:7px;flex-wrap:wrap;}
+.car-tag{font-size:0.72rem;font-weight:600;color:var(--brand-purple);background:var(--brand-purple-light);padding:3px 10px;border-radius:100px;border:1px solid rgba(91,12,78,0.12);}
+.car-apply-btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand-purple);color:#fff;border:none;padding:11px 20px;border-radius:10px;font-size:0.85rem;font-weight:700;cursor:pointer;flex-shrink:0;align-self:center;transition:background 0.2s,transform 0.15s,gap 0.2s;white-space:nowrap;}
+.car-apply-btn:hover{background:var(--brand-coral);transform:translateY(-1px);gap:12px;}
+
+/* FAQ */
+.car-faq-section{position:relative;z-index:1;padding:72px 20px;background:var(--surface-2);}
+.car-faq-inner{max-width:720px;margin:0 auto;text-align:center;}
+.car-faq-list{display:flex;flex-direction:column;gap:10px;text-align:left;}
+.car-faq-item{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-md);padding:18px 22px;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;}
+.car-faq-item:hover{border-color:rgba(91,12,78,0.2);box-shadow:var(--shadow-sm);}
+.car-faq-open{border-color:var(--brand-purple)!important;box-shadow:var(--shadow-md)!important;}
+.car-faq-row{display:flex;align-items:center;justify-content:space-between;gap:14px;}
+.car-faq-q{font-size:0.92rem;font-weight:700;color:var(--text-primary);}
+.car-faq-chevron{color:var(--text-muted);flex-shrink:0;}
+.car-faq-open .car-faq-chevron{color:var(--brand-purple);}
+.car-faq-a{font-size:0.86rem;color:var(--text-secondary);line-height:1.75;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);animation:fadeDown 0.2s ease;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+/* CTA BANNER */
+.car-cta-banner{position:relative;z-index:1;padding:88px 20px;overflow:hidden;background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=870&auto=format&fit=crop');background-size:cover;background-position:center top;}
+.car-cta-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,0.94) 0%,rgba(91,12,78,0.93) 100%);z-index:0;}
+.car-cta-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:24px;position:relative;z-index:1;}
+.car-cta-icon{width:56px;height:56px;background:rgba(255,255,255,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;}
+.car-cta-text{flex:1;}
+.car-cta-text h2{font-size:clamp(1.3rem,2.5vw,2rem);font-weight:800;color:#fff;margin-bottom:8px;}
+.car-cta-text p{font-size:0.92rem;color:rgba(255,255,255,0.65);line-height:1.65;max-width:480px;}
+.car-cta-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--brand-purple);border:none;padding:13px 24px;border-radius:12px;font-size:0.92rem;font-weight:700;cursor:pointer;flex-shrink:0;transition:background 0.2s,color 0.2s,transform 0.15s;box-shadow:0 4px 20px rgba(0,0,0,0.15);white-space:nowrap;}
+.car-cta-btn:hover{background:var(--brand-coral);color:#fff;transform:translateY(-2px);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .car-values-grid{grid-template-columns:repeat(2,1fr);}
+    .car-perks-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+    .car-hero{padding:68px 16px 56px;}
+    .car-hero-title{font-size:clamp(1.85rem,6vw,2.5rem);}
+    .car-values-section,.car-perks-section,.car-jobs-section,.car-faq-section{padding:56px 16px;}
+    .car-values-grid{grid-template-columns:1fr;}
+    .car-perks-grid{grid-template-columns:repeat(2,1fr);}
+    .car-job-card{flex-direction:column;gap:16px;}
+    .car-apply-btn{align-self:flex-start;width:100%;justify-content:center;}
+    .car-job-left{gap:12px;}
+    .car-cta-banner{padding:64px 16px;background-attachment:scroll;}
+    .car-cta-inner{flex-direction:column;text-align:center;}
+    .car-cta-icon{display:none;}
+    .car-cta-text p{max-width:100%;}
+    .car-cta-btn{width:100%;justify-content:center;}
+}
+@media(max-width:480px){
+    .car-perks-grid{grid-template-columns:1fr;}
+    .car-job-meta{flex-direction:column;gap:6px;}
+    .car-hero-title{font-size:1.85rem;}
+    .car-blob-1,.car-blob-2{display:none;}
+}
