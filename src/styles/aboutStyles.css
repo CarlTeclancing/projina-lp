@@ -1,14 +1,15 @@
 .about-container{
     /* border: solid 1px red; */
-    width: fit-content;
+    width: 100%;
     margin: auto;
-    padding:100px 0px;
+    padding:100px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
     gap: 30px;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .about-title{
@@ -16,6 +17,49 @@
     font-size: 40px;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 768px) {
+    .about-container {
+        padding: 60px 12px 40px;
+        width: 100%;
+        max-width: 100vw;
+        align-items: center;
+    }
+
+    .about-title {
+        font-size: 30px;
+    }
+
+    .dashboardScreenshot {
+        max-width: 95vw;
+        padding: 12px;
+        border-width: 6px;
+        border-radius: 14px;
+    }
+
+    .dashboardScreenshotImg {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .testimonials-container {
+        padding: 10px 6px 20px;
+        width: 100%;
+        max-width: 95vw;
+    }
+
+    .testimonials-slider {
+        animation: testimonial-marquee 32s linear infinite;
+        padding: 10px 0;
+    }
+
+    .about-block {
+        min-width: 260px;
+        max-width: 100%;
+        width: 80vw;
+    }
+}
+
 
 
 /* ═══════════════════════════════════════════════════════

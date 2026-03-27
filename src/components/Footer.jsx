@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/footerStyles.css'
-import styles from '../styles/landingStyles.module.css'
 
 import iconWhite from '../assets/icon-white.png'
 import { useNavigate } from "react-router-dom";
