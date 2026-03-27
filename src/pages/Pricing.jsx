@@ -1,17 +1,10 @@
 import React from "react";
 import '../styles/pricingStyles.css'
 import Services from "../components/Services";
-import check from '../assets/circleCheck.png'
-import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
-    const navigate = useNavigate()
     
     const handleGetStarted = () => {
-        window.location.href = "https://crms.projina.top/public/register";
-    }
-
-    const handleStartGrowing = () => {
         window.location.href = "https://crms.projina.top/public/register";
     }
 

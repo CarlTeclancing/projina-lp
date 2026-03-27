@@ -35,17 +35,17 @@ fi
 
 # Verify index.html exists in dist
 if [ ! -f "dist/index.html" ]; then
-  echo "❌ ERROR: dist/index.html not found!"
+  echo "[ERROR] dist/index.html not found!"
   exit 1
 fi
 
 # Show build summary
 echo "================================"
-echo "✅ Build Process Successful!"
+echo "[SUCCESS] Build Process Successful!"
 echo "================================"
 echo "
 "
-echo "📁 Dist folder structure:"
+echo "[INFO] Dist folder structure:"
 du -sh dist/
 echo "
 "

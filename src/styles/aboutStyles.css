@@ -18,41 +18,157 @@
 }
 
 
-.about-blocks{
-    display: flex;
-    gap:20px;
-    flex-wrap: wrap;
-    justify-content: center;
+/* ═══════════════════════════════════════════════════════
+   TESTIMONIALS — redesigned marquee
+   (only this block is changed from the original)
+═══════════════════════════════════════════════════════ */
+
+.testimonials-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 8px 0 20px;
+    /* soft fade on both edges */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 7%,
+        black 93%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 7%,
+        black 93%,
+        transparent 100%
+    );
 }
 
-.about-block{
-    padding:15px;
-    max-width: 250px;
-    background-color: white;
-    border-radius: 10px;
+.testimonials-slider {
+    display: flex;
+    gap: 20px;
+    padding: 12px 6px;
+    align-items: stretch;
+    width: max-content;
+    animation: testimonial-marquee 38s linear infinite;
+}
+
+/* Pause on hover so users can actually read a card */
+.testimonials-container:hover .testimonials-slider {
+    animation-play-state: paused;
+}
+
+@keyframes testimonial-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ── Card ── */
+.about-block {
+    min-width: 290px;
+    max-width: 290px;
+    background: #ffffff;
+    border: 1.5px solid #ebebf0;
+    border-radius: 18px;
+    padding: 24px 22px 20px;
     display: flex;
     flex-direction: column;
-    gap:10px;
-    font-size: small;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    gap: 14px;
+    box-shadow: 0 4px 20px rgba(91,12,78,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+    position: relative;
+    /* remove the old margin-right — gap handles spacing */
+    margin-right: 0;
 }
 
-.about-block-header{
+.about-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(91,12,78,0.14);
+    border-color: rgba(91,12,78,0.25);
+}
+
+/* Decorative open-quote mark */
+.about-block::before {
+    content: '\201C';
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 3.8rem;
+    line-height: 1;
+    color: #f0e4ee;
+    pointer-events: none;
+    font-family: Georgia, serif;
+}
+
+/* ── Header row (avatar + name) ── */
+.about-block-header {
     display: flex;
-    gap:10px;
+    gap: 12px;
+    align-items: center;
 }
 
-.about-block-profile{
+.profile-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid #f0e4ee;
+    flex-shrink: 0;
+}
+
+.about-block-profile {
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
+.about-block-profile b {
+    font-size: 0.88rem;
+    color: #1a1a2e;
+    line-height: 1.2;
+}
+
+/* job title — styled via the inline span[style] already in the JSX */
+.about-block-profile span {
+    font-size: 0.75rem !important;
+    color: #EA5254;
+    font-weight: 500;
+}
+
+/* Star strip injected just before the quote div */
+.about-block-stars {
+    display: flex;
+    gap: 2px;
+    margin-top: -4px;
+}
+.about-block-stars span {
+    color: #f59e0b;
+    font-size: 0.82rem;
+    line-height: 1;
+}
+
+/* ── Quote text ── */
+.about-block > div:last-child {
+    font-size: 0.855rem;
+    color: #5a5a72;
+    line-height: 1.75;
+    /* strip the visible " " from the JSX; the CSS ::before already adds one */
+    quotes: none;
+}
+
+/* ── Placeholder avatar (pp class, kept intact) ── */
 .pp{
     width: 50px;
     height: 50px;
-    background-color:rgb(200,200,200);
+    background-color: rgb(200,200,200);
     border-radius: 50px;
 }
+
+/* ═══════════════════════════════════════════════════
+   EVERYTHING BELOW IS UNCHANGED FROM THE ORIGINAL
+═══════════════════════════════════════════════════ */
 
 @media only screen and (max-width:500px) {
     .about-container{
