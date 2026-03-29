@@ -104,7 +104,7 @@ const Footer = ({ dashboardImage }) => {
                         <span className="footer-block-title">Contact</span>
                         <span className="footer-col-highlight">Projina company<br />management system</span>
                         <span className="footer-col-item">Yaounde, Cameroon</span>
-                        <span className="footer-col-item">info@projina.com</span>
+                        <span className="footer-col-item">Email: info@projina.com</span>
                     </div>
 
                     <div className="footer-col">
