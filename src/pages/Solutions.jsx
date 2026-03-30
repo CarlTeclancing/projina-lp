@@ -50,8 +50,11 @@ const Solutions = () => {
                         <div className="solution-header">
                             <span className="solution-title">All-in-one Company Management  for <span style={{color:'#EA5254'}} >Today's Companies</span> </span>
                             <span>
-                                <button className="btn-color" >Sign up for free</button> &nbsp;&nbsp;&nbsp;
-                                <button className="btn" onClick={()=>navigate("contact-us")}>Contact Sales</button>
+<a href="https://crms.projina.top/public/register" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
+                            <button className="btn-color" >Sign up for free</button>
+                        </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <button className="btn" onClick={()=>navigate("/contact-us")}>Contact Sales</button>
                             </span>
                         </div>
 

@@ -40,7 +40,7 @@ const Header = () => {
             <div className="header">
 
                 {/* Mobile: Login button (left) */}
-                <a href="https://app.projina.top" className="mobile-login-wrap">
+                <a href="http://crms.projina.top/public/login" className="mobile-login-wrap" rel="noopener noreferrer" target="_blank">
                     <button className="mobile-login">Login</button>
                 </a>
 
@@ -88,10 +88,10 @@ const Header = () => {
 
                 {/* Desktop: Auth buttons */}
                 <div className="headerBtns">
-                    <a href="http://crms.projina.top/">
+                    <a href="http://crms.projina.top/public/login" rel="noopener noreferrer" target="_blank">
                         <button className={styles.loginBtn}>Login</button>
                     </a>
-                    <a href="https://crms.projina.top/public/register">
+                    <a href="https://crms.projina.top/public/register" rel="noopener noreferrer" target="_blank">
                         <button className={styles.registerBtn}>Sign up for free</button>
                     </a>
                 </div>

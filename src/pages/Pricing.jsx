@@ -1,8 +1,10 @@
 import React from "react";
 import '../styles/pricingStyles.css'
 import Services from "../components/Services";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
+    const navigate = useNavigate();
     
     const handleGetStarted = () => {
         window.location.href = "https://crms.projina.top/public/register";
@@ -17,7 +19,7 @@ const Pricing = () => {
                         <div>You can monitor all your clients, projects, task, schedule meetings,  distribute files and manage inventory,finances and more in one place.</div>
                         <span>
                             <button className="btn-color" onClick={handleGetStarted}>Sign up for free</button>&nbsp;&nbsp;&nbsp;
-                            <button className="btn" onClick={()=>window.location.href="https://crms.projina.top/public/register"} >Contact sales</button>
+                            <button className="btn" onClick={() => navigate("/contact-us")} >Contact sales</button>
                         </span>
                     </div>
 

@@ -47,9 +47,11 @@ const LandingPage = () => {
                 <div className={styles.moto2}>Simplify Operations, Amplify Growth</div>
 
                 <div>
-                    <button className={styles.registerBtn}>
-                        Sign up for free <img src={arrowBack} alt="arrow" />
-                    </button>
+                    <a href="https://crms.projina.top/public/register" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
+                        <button className={styles.registerBtn}>
+                            Sign up for free <img src={arrowBack} alt="arrow" />
+                        </button>
+                    </a>
                 </div>
 
                 {/* Feature pills — icons vertically centred with text */}
