@@ -100,27 +100,29 @@
     overflow: hidden;
     position: relative;
     padding: 8px 0 20px;
+    /* soft edge fade */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
     mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
 }
 
-.testimonials-slider {
+/* JS-driven scroll track — no CSS animation, user can drag freely */
+.testimonials-track {
     display: flex;
     gap: 20px;
     padding: 12px 6px;
     align-items: stretch;
-    width: max-content;
-    animation: testimonial-marquee 38s linear infinite;
+    /* Enable horizontal scroll but hide scrollbar */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;          /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    user-select: none;
+    /* width must be content-wide so cards don't wrap */
+    width: 100%;
 }
-
-.testimonials-container:hover .testimonials-slider {
-    animation-play-state: paused;
-}
-
-@keyframes testimonial-marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
+.testimonials-track::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+.testimonials-track:active { cursor: grabbing; }
 
 /* ── Testimonial card ── */
 .about-block {
