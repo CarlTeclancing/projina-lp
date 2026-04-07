@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/howItWorksStyles.css';
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 import {
     HiOutlineUserAdd, HiOutlineAdjustments, HiOutlineClipboardCheck,
     HiOutlineTrendingUp, HiOutlineArrowRight, HiOutlineLightningBolt,
@@ -164,6 +166,8 @@ const HowItWorks = () => {
     const [openFaq, setOpenFaq] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
 
+    useParallax(0.3);
+
     useEffect(() => {
         const t = setInterval(() => setActiveStep(s => (s + 1) % 4), 2800);
         return () => clearInterval(t);
@@ -202,7 +206,7 @@ const HowItWorks = () => {
             <div className="hiw-blob hiw-blob-2"/>
 
             {/* HERO */}
-            <section className="hiw-hero">
+            <section className="hiw-hero" data-anim="fade-down">
                 <div className="hiw-hero-inner">
                     <div className="hiw-hero-left">
                         <span className="hiw-badge">How it works</span>
@@ -235,10 +239,10 @@ const HowItWorks = () => {
             </section>
 
             {/* ANIMATED TIMELINE */}
-            <section className="hiw-timeline-section">
+            <section className="hiw-timeline-section parallax" data-anim="fade-up">
                 <div className="hiw-timeline-inner">
                     <div className="hiw-section-label"><span>Simple process</span></div>
-                    <h2 className="hiw-section-title">How It Works</h2>
+                    <h2 className="hiw-section-title"><TypingText text="How It Works" speed={100} /></h2>
                     <p className="hiw-section-sub">Four simple steps to full operational clarity.</p>
 
                     <div className="hiw-timeline-track">
@@ -284,7 +288,7 @@ const HowItWorks = () => {
             </section>
 
             {/* ECOSYSTEM — inline SVG illustration */}
-            <section className="hiw-ecosystem-section">
+            <section className="hiw-ecosystem-section parallax" data-anim="fade-up">
                 <div className="hiw-ecosystem-inner">
                     <div className="hiw-section-label"><span>Platform ecosystem</span></div>
                     <h2 className="hiw-section-title">Everything connected. One platform.</h2>

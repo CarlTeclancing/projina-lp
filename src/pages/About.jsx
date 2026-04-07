@@ -1,17 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import '../styles/aboutStyles.css'
 import styles from '../styles/landingStyles.module.css'
-import '../styles/solutionStyles.css'
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 
 import aboutImg1 from '../assets/aboutImg1.jpg'
 import aboutImg2 from '../assets/aboutImg2.jpg'
 
 const About = () => {
+    useParallax(0.18);
     return (
         <React.Fragment>
             <div className="about-container">
 
-                <span className="about-title">About Us</span>
+                <span className="about-title"><TypingText text="About Us" speed={90} /></span>
 
                 <p style={{ textAlign: 'center', color: '#5a5a72', fontSize: '1rem', maxWidth: 600, lineHeight: 1.7 }}>
                     Projina is an all-in-one company management system built to simplify operations
@@ -19,12 +21,12 @@ const About = () => {
                 </p>
 
                 {/* Dashboard screenshot */}
-                <div className={styles.dashboardScreenshot}>
+                <div className={`${styles.dashboardScreenshot} parallax`} data-anim="slide-up">
                     <img src={aboutImg1} alt="Projina Dashboard" className={styles.dashboardScreenshotImg} />
                 </div>
 
                 {/* Intro card — clean, properly padded */}
-                <div className="about-intro-card">
+                <div className="about-intro-card" data-anim="fade-left">
                     <p>
                         We understand the challenges that come with running a business — scattered spreadsheets,
                         disconnected tools, and time lost chasing updates. Projina brings everything together in
@@ -39,9 +41,31 @@ const About = () => {
                     </ul>
                 </div>
 
+                <section className="about-feature-section" data-anim="fade-up">
+                    <div className="about-feature-card">
+                        <h2>Designed to remove friction at every step</h2>
+                        <p>Projina combines finance, team, and project tools into one connected workflow, so you can spend less time managing systems and more time growing your business.</p>
+                        <div className="about-feature-grid">
+                            <div className="about-feature-item">
+                                <strong>Clear visibility</strong>
+                                <p>Track deadlines, cash flow and team performance from one dashboard.</p>
+                            </div>
+                            <div className="about-feature-item">
+                                <strong>Fast setup</strong>
+                                <p>Start in minutes with guided onboarding and ready-made templates.</p>
+                            </div>
+                            <div className="about-feature-item">
+                                <strong>Unified operations</strong>
+                                <p>Manage projects, finances and people together — not in separate apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Our Story */}
                 <div className="sBlocks">
-                    <div className="sBlock">
+                    <div className="sBlock" data-anim="slide-left">
+                        <img src={aboutImg2} className="sBlock-img" alt="Our team" />
                         <div className="sBlock-text">
                             <h3>Our Story</h3>
                             <p>
@@ -61,12 +85,11 @@ const About = () => {
                                 beginning.
                             </p>
                         </div>
-                        <img src={aboutImg2} className="sBlock-img" alt="Our team" />
                     </div>
                 </div>
 
                 {/* Testimonials — drag / swipe to scroll */}
-                <h2 className="about-title smaller-title">What Founders Are Saying</h2>
+                <h2 className="about-title smaller-title" data-anim="fade-up"><TypingText text="What Founders Are Saying" speed={80} /></h2>
 
                 <TestimonialsSlider />
 

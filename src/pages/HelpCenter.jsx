@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/helpCenterStyles.css';
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 import dashboardHero from '../assets/dashboard/dashboardActivity.png';
 import {
     HiOutlineSearch,
@@ -21,6 +23,8 @@ const HelpCenter = () => {
     const navigate = useNavigate();
     const [openIndex, setOpenIndex] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
+
+    useParallax(0.2);
 
     const faqs = [
         {
@@ -92,13 +96,13 @@ const HelpCenter = () => {
             <div className="hc-blob hc-blob-2" />
 
             {/* ── HERO ── */}
-            <section className="hc-hero">
+            <section className="hc-hero parallax" data-anim="fade-down">
                 <div className="hc-hero-inner">
                     <div className="hc-hero-left">
                         <span className="hc-badge">Support Center</span>
                         <h1 className="hc-hero-title">
-                            How can we<br />
-                            <span className="hc-accent">help you</span> today?
+                            <TypingText text="How can we" speed={80} /> <br />
+                            <span className="hc-accent"><TypingText text="help you" speed={80} delay={800} /></span> <TypingText text="today?" speed={80} delay={1400} />
                         </h1>
                         <p className="hc-hero-sub">
                             Everything you need to know about Projina — answers, guides, and direct support in one place.
@@ -150,7 +154,7 @@ const HelpCenter = () => {
             </section>
 
             {/* ── FAQ ── */}
-            <section className="hc-faq-section">
+            <section className="hc-faq-section" data-anim="fade-up">
                 <div className="hc-section-inner">
                     <div className="hc-section-label">
                         <span>FAQ</span>

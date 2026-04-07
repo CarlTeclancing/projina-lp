@@ -2,6 +2,7 @@ import LandingPage from './LandingPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './Layout'
 import NotFound from './pages/404.jsx'
+import useScrollAnimation from './hooks/useScrollAnimation'
 import Pricing from './pages/Pricing.jsx'
 import Solutions from './pages/Solutions.jsx'
 import About from './pages/About.jsx'
@@ -13,6 +14,7 @@ import Career from './pages/Career.jsx'
 import Business from './pages/Business.jsx'
 
 function App() {
+  useScrollAnimation()
 
   return (
     <>

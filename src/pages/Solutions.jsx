@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import '../styles/solutionStyles.css'
 import dashboard from '../assets/dashboard/dashboardTaskBoard.png'
+import testimonialImage from '../assets/WhatsApp Image 2026-04-06 at 2.55.50 PM.jpeg'
 
 import styles from '../styles/landingStyles.module.css'
 import sol1 from '../assets/sol1.jpg'
 import sol2 from '../assets/sol2.png'
 import sol3 from '../assets/sol3.png'
 import sol4 from '../assets/sol4.png'
-import sworking from '../assets/sworking.jpg'
 import { useNavigate } from "react-router-dom";
 import { FaChevronDown } from 'react-icons/fa';
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 
 
 const Solutions = () => {
     const navigate = useNavigate()
+    useParallax(0.22)
 
     const data = [
         {   
@@ -47,8 +50,8 @@ const Solutions = () => {
             <div className="solution-bg">
                 <div className="solution-container" >
                     <div >
-                        <div className="solution-header">
-                            <span className="solution-title">All-in-one Company Management  for <span style={{color:'#EA5254'}} >Today's Companies</span> </span>
+                        <div className="solution-header" data-anim="fade-up">
+                            <span className="solution-title"><TypingText text="All-in-one Company Management for " speed={70} /> <span style={{color:'#EA5254'}} ><TypingText text="Today's Companies" speed={70} delay={1100} /></span></span>
                             <span>
 <a href="https://crms.projina.top/public/register" rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
                             <button className="btn-color" >Sign up for free</button>
@@ -58,7 +61,7 @@ const Solutions = () => {
                             </span>
                         </div>
 
-                        <div className={styles.dashboardScreenshot}>
+                        <div className={`${styles.dashboardScreenshot} parallax`} data-anim="slide-up">
                             <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardScreenshotImg} />
                         </div>
 
@@ -69,7 +72,7 @@ const Solutions = () => {
                         <p>Whether you’re just starting out or running a large enterprise, Projina equips you with powerful tools to manage finances, teams, projects, and schedules — keeping operations smooth and growth on track.</p>
                     </div>
 
-                    <div className="sBlocks" >
+                    <div className="sBlocks" data-anim="fade-up" data-delay="2">
                         <div className="sBlock">
                             <div> <img src={sol1} className="sBlock-img" /> </div>
                             <div className="sBlock-text" >
@@ -131,19 +134,19 @@ const Solutions = () => {
                         </div>
                     </div>
 
-                    <span style={{fontWeight:400}} className="faq-title">
+                    <span style={{fontWeight:400}} className="faq-title" data-anim="fade-left">
                         Frequently Asked Questions
                     </span>
 
-                    <div className="faq-container">
+                    <div className="faq-container" data-anim="fade-up" data-delay="2">
                         {
                             data.map((faq ,index) => <FaqItem key={index} data={faq} />)
                         }
                     </div>
 
-                    <div className={styles.tabContent}>
+                    <div className={styles.tabContent} data-anim="fade-right">
                         <div>
-                            <img src={sworking} className={styles.tabImage} style={{objectFit:'cover'}}/>
+                            <img src={testimonialImage} className={styles.tabImage} style={{objectFit:'cover'}} alt="Customer testimonial"/>
                         </div>
                         <div style={{width:350 ,fontSize:'large'}}>
                             <p className={styles.tabText} >"I no longer waste time juggling spreadsheets and chasing updates everything from finances to schedules runs smoothly."</p>

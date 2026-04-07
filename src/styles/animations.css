@@ -50,6 +50,23 @@
     from { opacity: 0; transform: translateY(20px) scale(0.8); }
     to   { opacity: 1; transform: translateY(0) scale(1); }
 }
+
+/* ── Typing animation cursor ── */
+.typing-cursor {
+    animation: blink 1s infinite;
+    color: #8B1C78;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* ── Parallax effect ── */
+.parallax {
+    transform: translateY(var(--parallax-y, 0));
+    transition: transform 0.1s ease-out;
+}
 @keyframes anim-lineGrow {
     from { width: 0; }
     to   { width: 100%; }
