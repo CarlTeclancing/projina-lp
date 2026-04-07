@@ -64,8 +64,7 @@ const About = () => {
 
                 {/* Our Story */}
                 <div className="sBlocks">
-                    <div className="sBlock" data-anim="slide-left">
-                        <img src={aboutImg2} className="sBlock-img" alt="Our team" />
+                    <div className="sBlock">
                         <div className="sBlock-text">
                             <h3>Our Story</h3>
                             <p>
@@ -85,6 +84,7 @@ const About = () => {
                                 beginning.
                             </p>
                         </div>
+                        <img src={aboutImg2} className="sBlock-img" alt="Our team" />
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@ export default About;
    Drag-to-scroll + auto-scroll testimonials
 ───────────────────────────────────────── */
 const TESTIMONIALS = [
-    { name: 'John Anderson',   title: 'Tech Startup Founder',   quote: 'Projina transformed how we manage our operations. The dashboard is intuitive and saves us hours every week.',          image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80' },
+    { name: 'Janny Anderson',   title: 'Tech Startup Founder',   quote: 'Projina transformed how we manage our operations. The dashboard is intuitive and saves us hours every week.',          image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80' },
     { name: 'Sarah Mitchell',  title: 'E-commerce Owner',        quote: 'From invoicing to team scheduling, everything is streamlined. Highly recommend for growing businesses.',              image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=100&q=80' },
     { name: 'Ryan Lee',        title: 'Consulting Firm CEO',     quote: 'The analytics features give us real insights into our performance. Projina is a game-changer.',                       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80' },
     { name: 'Emma Kim',        title: 'Non-profit Director',     quote: 'Managing volunteers and projects has never been easier. Projina adapts to our unique needs.',                         image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=100&q=80' },
