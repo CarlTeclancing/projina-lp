@@ -1,14 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { HiOutlineSearch } from "react-icons/hi";
+import "../styles/notFoundStyles.css";
 
 const NotFound = () => {
-    return(
-        <React.Fragment>
-            <div style={{position:'absolute' ,lineHeight:'0%' ,top:'40%' ,left:'50%' ,transform:'translate(-50% ,-50%)' ,textAlign:'center'}}>
-                <h1 style={{fontSize:150}}>404 🔍</h1>
-                <h2 style={{fontSize:50}}>Not Found</h2>
-            </div>
-        </React.Fragment>
-    )
-}
+    return (
+        <main className="notfound-page">
+            <section className="notfound-card">
+                <div className="notfound-ring notfound-ring-1" />
+                <div className="notfound-ring notfound-ring-2" />
+                <div className="notfound-ring notfound-ring-3" />
 
-export default NotFound
+                <div className="notfound-hero">
+                    <span className="notfound-code">404</span>
+                    <div className="notfound-icon">
+                        <HiOutlineSearch size={36} />
+                    </div>
+                </div>
+
+                <h1>Page not found</h1>
+                <p>
+                    The page you’re looking for might have been moved, renamed, or
+                    is temporarily unavailable. Try going back home or contact us
+                    if you need help.
+                </p>
+
+                <div className="notfound-actions">
+                    <Link to="/" className="btn btn-primary">
+                        Back to home
+                    </Link>
+                    <Link to="/contact-us" className="btn btn-secondary">
+                        Contact support
+                    </Link>
+                </div>
+            </section>
+        </main>
+    );
+};
+
+export default NotFound;
