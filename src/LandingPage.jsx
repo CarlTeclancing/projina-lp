@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles/landingStyles.module.css'
+import TypingText from './components/TypingText'
+import useParallax from './hooks/useParallax'
 
 import dashboard from './assets/dashboard/dashboardTeams.png'
 import working from './assets/working.png'
@@ -24,11 +26,13 @@ const LandingPage = () => {
 
     const [activeBar, setActiveBar] = useState('1')
 
+    useParallax(0.15);
+
     return (
         <React.Fragment>
 
             {/* ── Hero desc ── */}
-            <div className={styles.desc}>
+            <div className={styles.desc} data-anim="fade-up">
 
                 {/* Badge — trophy + text perfectly inline */}
                 <div>
@@ -40,8 +44,8 @@ const LandingPage = () => {
                 </div>
 
                 <div className={styles.moto1}>
-                    <span>Make Company</span>
-                    <span> Management <span style={{ color: '#EA5254' }}>Effortless</span></span>
+                    <TypingText text="Make Company" speed={100} />
+                    <TypingText text=" Management " speed={100} delay={1200} /><span style={{ color: '#EA5254' }}><TypingText text="Effortless" speed={100} delay={2400} /></span>
                 </div>
 
                 <div className={styles.moto2}>Simplify Operations, Amplify Growth</div>
@@ -76,12 +80,12 @@ const LandingPage = () => {
             </div>
 
             {/* ── Dashboard screenshot ── */}
-            <div className={styles.dashboardScreenshot}>
+            <div className={styles.dashboardScreenshot} data-anim="slide-up">
                 <img src={dashboard} alt="Dashboard Screenshot" className={styles.dashboardScreenshotImg} />
             </div>
 
             {/* ── Services ── */}
-            <div id="features" className={styles.servicesContainer}>
+            <div id="features" className={styles.servicesContainer} data-anim="fade-up">
                 <div className={styles.serviceTitleContainer}>
                     <div className={styles.serviceHeaderTitle}>
                         One <span style={{ color: '#EA5254' }}>Platform.</span> Every Tool You Need
@@ -95,7 +99,7 @@ const LandingPage = () => {
             </div>
 
             {/* ── Section 1 ── */}
-            <div className={styles.section1}>
+            <div className={`${styles.section1} parallax`} data-anim="fade-up">
                 <div>
                     <img src={working} style={{ objectFit: 'cover' }} className={styles.section1Image} alt="Team working" />
                 </div>
@@ -137,7 +141,7 @@ const LandingPage = () => {
             </div>
 
             {/* ── Section 2 ── */}
-            <div className={styles.section2}>
+            <div className={`${styles.section2} parallax`} data-anim="fade-up">
                 <div>
                     <h1 className={styles.section2Title}>Designed for the real needs of modern businesses.</h1>
                 </div>

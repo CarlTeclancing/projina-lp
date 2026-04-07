@@ -1,0 +1,218 @@
+/* ═══════════════════════════════════════════════════
+   PROJINA — GLOBAL SCROLL ANIMATIONS
+   Import this once in your App.jsx or index.css:
+   import './styles/animations.css'
+═══════════════════════════════════════════════════ */
+
+/* ── Keyframe definitions ── */
+@keyframes anim-fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes anim-fadeDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes anim-fadeLeft {
+    from { opacity: 0; transform: translateX(-48px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes anim-fadeRight {
+    from { opacity: 0; transform: translateX(48px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes anim-scaleIn {
+    from { opacity: 0; transform: scale(0.88); }
+    to   { opacity: 1; transform: scale(1); }
+}
+@keyframes anim-flipUp {
+    from { opacity: 0; transform: perspective(600px) rotateX(18deg) translateY(30px); }
+    to   { opacity: 1; transform: perspective(600px) rotateX(0deg) translateY(0); }
+}
+@keyframes anim-blurIn {
+    from { opacity: 0; filter: blur(10px); transform: translateY(16px); }
+    to   { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+@keyframes anim-slideUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes anim-popIn {
+    0%   { opacity: 0; transform: scale(0.7); }
+    70%  { transform: scale(1.06); }
+    100% { opacity: 1; transform: scale(1); }
+}
+@keyframes anim-glowPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(91,12,78,0); }
+    50%       { box-shadow: 0 0 0 8px rgba(91,12,78,0.12); }
+}
+@keyframes anim-countUp {
+    from { opacity: 0; transform: translateY(20px) scale(0.8); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Typing animation cursor ── */
+.typing-cursor {
+    animation: blink 1s infinite;
+    color: #8B1C78;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* ── Parallax effect ── */
+.parallax {
+    transform: translateY(var(--parallax-y, 0));
+    transition: transform 0.1s ease-out;
+}
+@keyframes anim-lineGrow {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+@keyframes anim-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+@keyframes anim-wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25%       { transform: rotate(-4deg); }
+    75%       { transform: rotate(4deg); }
+}
+@keyframes anim-shimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
+}
+
+/* ══════════════════════════════════════════
+   SCROLL TRIGGER BASE STATES
+   Elements start invisible; JS adds .is-visible
+   to trigger the animation
+══════════════════════════════════════════ */
+
+/* Default: all animated elements start hidden */
+[data-anim] {
+    opacity: 0;
+    transition: none;
+}
+
+/* When JS adds .is-visible, run the chosen animation */
+[data-anim="fade-up"].is-visible          { animation: anim-fadeUp   0.7s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="fade-down"].is-visible        { animation: anim-fadeDown  0.7s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="fade-left"].is-visible        { animation: anim-fadeLeft  0.7s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="fade-right"].is-visible       { animation: anim-fadeRight 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="scale-in"].is-visible         { animation: anim-scaleIn   0.65s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="flip-up"].is-visible          { animation: anim-flipUp    0.75s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="blur-in"].is-visible          { animation: anim-blurIn    0.75s ease both; }
+[data-anim="slide-up"].is-visible         { animation: anim-slideUp   0.8s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="pop-in"].is-visible           { animation: anim-popIn     0.6s cubic-bezier(0.22,1,0.36,1) both; }
+[data-anim="count-up"].is-visible         { animation: anim-countUp   0.65s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* Delay helpers — add data-delay="1" through "8" */
+[data-delay="1"] { animation-delay: 0.08s !important; }
+[data-delay="2"] { animation-delay: 0.16s !important; }
+[data-delay="3"] { animation-delay: 0.24s !important; }
+[data-delay="4"] { animation-delay: 0.32s !important; }
+[data-delay="5"] { animation-delay: 0.40s !important; }
+[data-delay="6"] { animation-delay: 0.48s !important; }
+[data-delay="7"] { animation-delay: 0.56s !important; }
+[data-delay="8"] { animation-delay: 0.64s !important; }
+
+/* ── Floating animation for hero images / badges ── */
+.anim-float {
+    animation: anim-float 3.5s ease-in-out infinite;
+}
+.anim-float-slow {
+    animation: anim-float 5s ease-in-out infinite;
+}
+
+/* ── Glow pulse on featured elements ── */
+.anim-glow-pulse {
+    animation: anim-glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* ── Shimmer on skeleton / loading ── */
+.anim-shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    background-size: 600px 100%;
+    animation: anim-shimmer 1.8s linear infinite;
+}
+
+/* ── Underline grow (for section labels / headings) ── */
+.anim-underline {
+    position: relative;
+    display: inline-block;
+}
+.anim-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #EA5254;
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.anim-underline.is-visible::after {
+    width: 100%;
+}
+
+/* ── Hover micro-interactions ── */
+.anim-hover-lift {
+    transition: transform 0.22s cubic-bezier(0.22,1,0.36,1), box-shadow 0.22s ease;
+}
+.anim-hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(91,12,78,0.14);
+}
+
+.anim-hover-scale {
+    transition: transform 0.2s cubic-bezier(0.22,1,0.36,1);
+}
+.anim-hover-scale:hover {
+    transform: scale(1.04);
+}
+
+.anim-hover-glow {
+    transition: box-shadow 0.25s ease;
+}
+.anim-hover-glow:hover {
+    box-shadow: 0 0 0 3px rgba(91,12,78,0.18), 0 8px 32px rgba(91,12,78,0.12);
+}
+
+/* ── Button press feedback ── */
+.anim-press {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.anim-press:active {
+    transform: scale(0.96);
+    box-shadow: none !important;
+}
+
+/* ── Stagger children automatically ── */
+.anim-stagger-children > * {
+    opacity: 0;
+}
+.anim-stagger-children.is-visible > *:nth-child(1)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.04s both; }
+.anim-stagger-children.is-visible > *:nth-child(2)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.12s both; }
+.anim-stagger-children.is-visible > *:nth-child(3)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.20s both; }
+.anim-stagger-children.is-visible > *:nth-child(4)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.28s both; }
+.anim-stagger-children.is-visible > *:nth-child(5)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.36s both; }
+.anim-stagger-children.is-visible > *:nth-child(6)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.44s both; }
+.anim-stagger-children.is-visible > *:nth-child(7)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.52s both; }
+.anim-stagger-children.is-visible > *:nth-child(8)  { animation: anim-fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.60s both; }
+
+/* ── Accessibility ── */
+@media (prefers-reduced-motion: reduce) {
+    [data-anim], [data-anim].is-visible,
+    .anim-float, .anim-float-slow,
+    .anim-glow-pulse, .anim-shimmer,
+    .anim-stagger-children > * {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}

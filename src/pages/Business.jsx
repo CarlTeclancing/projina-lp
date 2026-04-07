@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/businessStyles.css';
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 import {
     HiOutlineLightBulb,
     HiOutlineAcademicCap,
@@ -20,6 +22,8 @@ import {
 const Business = () => {
     const navigate = useNavigate();
     const [openFaq, setOpenFaq] = useState(null);
+
+    useParallax(0.25);
 
     const services = [
         { title: "Consulting", description: "Expert advice to audit, streamline, and optimize your core business processes. We identify gaps and deliver a clear roadmap to operational excellence.", icon: <HiOutlineLightBulb size={28} />, highlights: ["Process audits", "Strategic roadmaps", "ROI-focused outcomes"], color: "#5B0C4E" },
@@ -54,7 +58,7 @@ const Business = () => {
             <div className="biz-blob biz-blob-2" />
 
             {/* HERO */}
-            <section className="biz-hero">
+            <section className="biz-hero" data-anim="fade-down">
                 <div className="biz-hero-inner">
                     <span className="biz-badge"><HiOutlineBriefcase size={14} /> Enterprise Solutions</span>
                     <h1 className="biz-hero-title">Tailored services to<br /><span className="biz-accent">scale your business</span></h1>
@@ -81,7 +85,7 @@ const Business = () => {
                     <div className="biz-section-label"><span>What we offer</span></div>
                     <h2 className="biz-section-title">Our Business Services</h2>
                     <p className="biz-section-sub">Each service is designed to remove friction and accelerate your path to operational clarity.</p>
-                    <div className="biz-services-grid">
+                    <div className="biz-services-grid" data-anim="fade-up">
                         {services.map((svc, i) => (
                             <div className="biz-service-card" key={i}>
                                 <div className="biz-service-icon" style={{ background: `${svc.color}12`, color: svc.color }}>{svc.icon}</div>
@@ -100,10 +104,10 @@ const Business = () => {
             </section>
 
             {/* INDUSTRIES */}
-            <section className="biz-industries-section">
+            <section className="biz-industries-section parallax">
                 <div className="biz-section-inner">
                     <div className="biz-section-label"><span>Who we serve</span></div>
-                    <h2 className="biz-section-title">Built for every industry</h2>
+                    <h2 className="biz-section-title"><TypingText text="Built for every industry" speed={90} /></h2>
                     <p className="biz-section-sub">Whether you're a lean startup or a global enterprise, Projina adapts to your operational needs.</p>
                     <div className="biz-industries-grid">
                         {industries.map((ind, i) => (
@@ -117,10 +121,10 @@ const Business = () => {
             </section>
 
             {/* FAQ */}
-            <section className="biz-faq-section">
+            <section className="biz-faq-section" data-anim="fade-up">
                 <div className="biz-faq-inner">
                     <div className="biz-section-label"><span>FAQ</span></div>
-                    <h2 className="biz-section-title">Business plan questions</h2>
+                    <h2 className="biz-section-title"><TypingText text="Business plan questions" speed={90} /></h2>
                     <p className="biz-section-sub" style={{marginBottom: 40}}>Answers to what enterprise clients ask most.</p>
                     <div className="biz-faq-list">
                         {faqs.map((faq, i) => (

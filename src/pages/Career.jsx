@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/careerStyles.css';
+import TypingText from '../components/TypingText';
+import useParallax from '../hooks/useParallax';
 import {
     HiOutlineCode,
     HiOutlineClipboardList,
@@ -24,6 +26,8 @@ import {
 const Career = () => {
     const navigate = useNavigate();
     const [openFaq, setOpenFaq] = useState(null);
+
+    useParallax(0.2);
 
     const jobs = [
         { title: "Software Engineer", location: "Yaounde, Cameroon", type: "Full-time", department: "Engineering", description: "Join our core team to architect and ship features that power thousands of businesses.", icon: <HiOutlineCode size={24} />, tags: ["React", "Node.js", "PostgreSQL"], color: "#5B0C4E" },
@@ -72,7 +76,7 @@ const Career = () => {
             <div className="car-blob car-blob-2" />
 
             {/* HERO */}
-            <section className="car-hero">
+            <section className="car-hero" data-anim="fade-down">
                 <div className="car-hero-inner">
                     <span className="car-badge">We're hiring</span>
                     <h1 className="car-hero-title">Build the future of<br /><span className="car-accent">business management</span></h1>
@@ -81,7 +85,7 @@ const Career = () => {
             </section>
 
             {/* VALUES */}
-            <section className="car-values-section">
+            <section className="car-values-section" data-anim="fade-up">
                 <div className="car-section-inner">
                     <div className="car-section-label"><span>Our values</span></div>
                     <h2 className="car-section-title">What we believe in</h2>
@@ -99,10 +103,10 @@ const Career = () => {
             </section>
 
             {/* PERKS */}
-            <section className="car-perks-section">
+            <section className="car-perks-section parallax">
                 <div className="car-section-inner">
                     <div className="car-section-label"><span>Benefits</span></div>
-                    <h2 className="car-section-title">Why you'll love working here</h2>
+                    <h2 className="car-section-title"><TypingText text="Why you'll love working here" speed={85} /></h2>
                     <p className="car-section-sub">We take care of our people so they can do the best work of their lives.</p>
                     <div className="car-perks-grid">
                         {perks.map((p, i) => (
@@ -117,10 +121,10 @@ const Career = () => {
             </section>
 
             {/* JOBS */}
-            <section className="car-jobs-section">
+            <section className="car-jobs-section" data-anim="fade-up">
                 <div className="car-section-inner">
                     <div className="car-section-label"><span>Open positions</span></div>
-                    <h2 className="car-section-title">Join Our Team</h2>
+                    <h2 className="car-section-title"><TypingText text="Join Our Team" speed={85} /></h2>
                     <p className="car-section-sub">We're looking for passionate people to help us build the next generation of Projina.</p>
                     <div className="car-jobs-list">
                         {jobs.map((job, i) => (

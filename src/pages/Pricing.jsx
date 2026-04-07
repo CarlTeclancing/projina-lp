@@ -3,9 +3,12 @@ import '../styles/pricingStyles.css'
 import Services from "../components/Services";
 import { useNavigate } from "react-router-dom";
 import { GiImperialCrown } from "react-icons/gi";
+import TypingText from "../components/TypingText";
+import useParallax from "../hooks/useParallax";
 
 const Pricing = () => {
     const navigate = useNavigate();
+    useParallax(0.2);
     
     const handleGetStarted = () => {
         window.location.href = "https://crms.projina.top/public/register";
@@ -15,8 +18,8 @@ const Pricing = () => {
         <React.Fragment>
             <div className="pricing-bg" >
                 <div className="pricing-container" >
-                    <div className="pricing-header">
-                        <span className="pricing-title">Pricing<span style={{color:'#5B0C4E'}} >Plans</span></span>
+                    <div className="pricing-header" data-anim="fade-up">
+                        <span className="pricing-title"><TypingText text="Pricing" speed={90} /> <TypingText text="Plans" speed={90} delay={700} /></span>
                         <div>You can monitor all your clients, projects, task, schedule meetings, distribute files and manage inventory, finances and more in one place.</div>
                         <span style={{display:'inline-flex', gap:'12px', flexWrap:'wrap', justifyContent:'center'}}>
                             <button className="btn-color" onClick={handleGetStarted}>Sign up for free</button>
@@ -24,9 +27,9 @@ const Pricing = () => {
                         </span>
                     </div>
 
-                    <div className="pricings">
+                    <div className="pricings parallax" data-anim="slide-up">
                         {/* ── Starter ── */}
-                        <div className="pricing-block">
+                        <div className="pricing-block" data-anim="fade-up">
                             <h3>Starter</h3>
                             <span style={{color:'black'}}>Perfect for solo founders and small freelancers who want to manage clients and projects.</span>
                             <div className="price">
@@ -52,7 +55,7 @@ const Pricing = () => {
                         </div>
 
                         {/* ── Growth (Most Popular) ── */}
-                        <div className="pricing-block growth-block">
+                        <div className="pricing-block growth-block" data-anim="fade-up">
                             <h3 style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
                                 <span>Growth</span>
                                 {/* Professional "Most Popular" badge with crown */}
@@ -85,7 +88,7 @@ const Pricing = () => {
                         </div>
 
                         {/* ── Enterprise ── */}
-                        <div className="pricing-block">
+                        <div className="pricing-block" data-anim="fade-up">
                             <h3>Enterprise</h3>
                             <span style={{color:'black'}}>Built for distributors, marketplaces, and large teams.</span>
                             <div className="price">
@@ -111,7 +114,7 @@ const Pricing = () => {
                         </div>
 
                         {/* ── Custom ── */}
-                        <div className="pricing-block custom-pricing-block">
+                        <div className="pricing-block custom-pricing-block" data-anim="fade-up">
                             <h3>Custom</h3>
                             <span style={{color:'black'}}>Need something unique? Get a tailored solution designed specifically for your business needs.</span>
                             <div className="price">
