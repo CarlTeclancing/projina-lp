@@ -32,6 +32,9 @@ function App() {
         </Route>
         <Route path='/contact-us' element={<Contact/>} />
         <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
+        <Route path='/privacy-policy' element={<TermsAndConditions/>}/>
+        <Route path='/refund-policy' element={<TermsAndConditions/>}/>
+        <Route path='/cancellation-policy' element={<TermsAndConditions/>}/>
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </BrowserRouter>

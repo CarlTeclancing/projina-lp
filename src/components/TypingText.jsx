@@ -1,25 +1,48 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const TypingText = ({ text, speed = 50, delay = 0, className = '' }) => {
+const TypingText = ({ text, speed = 50, delay = 0, loop = false, className = '' }) => {
   const [displayedText, setDisplayedText] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const elementRef = useRef(null);
+  const isActiveRef = useRef(false);
 
   useEffect(() => {
+    let startTimeout;
+    let animationInterval;
+    let pauseTimeout;
+    let eraseInterval;
+
+    const typeText = () => {
+      let index = 0;
+      setDisplayedText('');
+      animationInterval = setInterval(() => {
+        index += 1;
+        setDisplayedText(text.slice(0, index));
+        if (index === text.length) {
+          clearInterval(animationInterval);
+          if (loop) {
+            pauseTimeout = setTimeout(() => {
+              let eraseIndex = text.length;
+              eraseInterval = setInterval(() => {
+                eraseIndex -= 1;
+                setDisplayedText(text.slice(0, eraseIndex));
+                if (eraseIndex === 0) {
+                  clearInterval(eraseInterval);
+                  typeText();
+                }
+              }, speed / 2);
+            }, 2200);
+          }
+        }
+      }, speed);
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !isTyping) {
-          setIsTyping(true);
-          setTimeout(() => {
-            let index = 0;
-            const interval = setInterval(() => {
-              setDisplayedText(text.slice(0, index + 1));
-              index++;
-              if (index === text.length) {
-                clearInterval(interval);
-              }
-            }, speed);
-          }, delay);
+        if (entries[0].isIntersecting && !isActiveRef.current) {
+          isActiveRef.current = true;
+          setIsActive(true);
+          startTimeout = setTimeout(typeText, delay);
         }
       },
       { threshold: 0.5 }
@@ -29,13 +52,20 @@ const TypingText = ({ text, speed = 50, delay = 0, className = '' }) => {
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
-  }, [text, speed, delay, isTyping]);
+    return () => {
+      observer.disconnect();
+      isActiveRef.current = false;
+      clearTimeout(startTimeout);
+      clearTimeout(pauseTimeout);
+      clearInterval(animationInterval);
+      clearInterval(eraseInterval);
+    };
+  }, [text, speed, delay, loop]);
 
   return (
     <span ref={elementRef} className={className}>
       {displayedText}
-      {isTyping && displayedText.length < text.length && <span className="typing-cursor">|</span>}
+      {isActive && <span className="typing-cursor">|</span>}
     </span>
   );
 };
