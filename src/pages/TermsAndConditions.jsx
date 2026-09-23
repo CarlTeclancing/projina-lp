@@ -82,69 +82,103 @@ const TermsContent = () => (
       </p>
     </div>
 
-    <Section title="1. Introduction and Acceptance">
-      <p>Welcome to Projina, a project management platform developed and operated by <strong>Crestlancing Ltd</strong>, a company registered and operating under the laws of the Republic of Cameroon.</p>
-      <p>These Terms and Conditions ("Terms") govern your access to and use of the Projina platform, including its website, web application, software, features, and related services (collectively, the "Services").</p>
-      <p>By accessing, registering for, or using Projina, you acknowledge that you have read, understood, and agree to be bound by these Terms, together with the policies incorporated into them, including the Privacy Policy, Refund Policy, and Cancellation Policy.</p>
-      <p>If you are accessing or using Projina on behalf of a company, organization, business, or other legal entity, you represent that you are authorized to accept these Terms on behalf of that entity.</p>
-      <p>If you do not agree to these Terms, you must not access or use the Services.</p>
+    <Section title="1. About Projina">
+      <p>Projina is a project management application designed for software teams to manage projects, assign tasks, collaborate with team members, and track work progress.</p>
+      <p>The platform allows organizations to create workspaces where employees can access projects, tasks, files, and other work-related information.</p>
     </Section>
 
-    <Section title="2. Definitions and Scope of the Services">
-      <p>For the purposes of these Terms, <strong>"Crestlancing Ltd", "Crestlancing", "we", "us", or "our"</strong> means the company that develops and operates Projina.</p>
-      <p><strong>"Projina"</strong> means the project management platform developed and operated by Crestlancing Ltd, including its website, web application, software, tools, features, and related services.</p>
-      <p><strong>"Services"</strong> means the services and functionalities made available through Projina, including project management, task management, team collaboration, workspace management, file sharing, and related features.</p>
-      <p><strong>"Customer"</strong> means the company, organization, business, institution, or other legal entity that subscribes to or uses Projina.</p>
+    <Section title="2. Account Registration">
+      <p>Access to Projina requires an account.</p>
+      <p>Accounts are typically created by a company's administrator who provides login credentials to employees.</p>
+      <p>Users may also request access to a company workspace by submitting their name, work email address, and role within the organization.</p>
+      <p>By using Projina, you agree that the information you provide is accurate and up to date.</p>
     </Section>
 
-    <Section title="3. Account Registration and Eligibility">
-      <p>Access to certain Projina features requires the creation of an account. You agree to provide information that is accurate, complete, and reasonably up to date when creating or maintaining an account.</p>
-      <p>Where an account is created or managed by an Organization, the Organization's Administrator may control user access, permissions, and account management.</p>
-      <p>You are responsible for maintaining the confidentiality of your login credentials and for activities carried out through your account.</p>
-    </Section>
-
-    <Section title="4. Subscription Plans">
-      <p>Projina may offer a free or freemium plan and paid subscription plans, including <strong>Basic, Pro, and Enterprise</strong> plans.</p>
-      <p>Each plan may include different features, limits, storage allocations, user allowances, or other functionality.</p>
-    </Section>
-
-    <Section title="5. Acceptable Use">
-      <p>You agree not to use Projina to:</p>
+    <Section title="3. User Roles">
+      <p>Projina supports different user roles including administrators and employees.</p>
+      <p><strong>Administrators may:</strong></p>
       <List items={[
-        "violate any applicable law or regulation;",
-        "gain unauthorized access to systems, accounts, Workspaces, or data;",
-        "interfere with or disrupt the Services;",
-        "introduce viruses, malware, malicious code, or other harmful software;",
-        "attempt to bypass security or access controls;",
-        "use the Services for fraud, abuse, harassment, or other unlawful conduct;",
-        "upload content that you do not have the right to use or distribute; or",
-        "otherwise misuse the Services in a manner that could harm Projina, Crestlancing, other users, or third parties.",
+        "Create and manage projects",
+        "Create teams and assign members",
+        "Assign tasks and responsibilities",
+        "Manage workspace users",
+        "Delete user accounts",
+      ]} />
+      <p><strong>Employees may:</strong></p>
+      <List items={[
+        "View assigned projects",
+        "Create and manage tasks related to their work",
+        "Upload files and share documents with team members",
       ]} />
     </Section>
 
-    <Section title="6. Data Protection and Privacy">
-      <p>Crestlancing processes personal data in accordance with its Privacy Policy and applicable data-protection laws and regulations.</p>
-      <p>The Privacy Policy explains the categories of personal data collected, the purposes of processing, data-sharing practices, security measures, retention, deletion, and applicable privacy rights.</p>
+    <Section title="4. Acceptable Use">
+      <p>Users agree not to misuse the platform. The following activities are strictly prohibited:</p>
+      <List items={[
+        "Uploading illegal, harmful, or malicious content",
+        "Attempting to hack or disrupt the platform",
+        "Uploading viruses or malware",
+        "Attempting unauthorized access to other accounts",
+        "Using the platform for unlawful activities",
+      ]} />
+      <p>Crestlancing reserves the right to suspend or terminate accounts that violate these rules.</p>
     </Section>
 
-    <Section title="7. Billing and Payments">
-      <p>Paid Services are generally billed in advance according to the subscription period selected by the Customer.</p>
-      <p>Depending on availability, payments may be made through methods including <strong>Mobile Money or Bank Transfer</strong>, or other payment methods made available by Crestlancing.</p>
+    <Section title="5. Subscription Plans">
+      <p>Projina operates under a freemium model with three plans:</p>
+      <List items={["Basic Plan", "Pro Plan", "Enterprise Plan"]} />
+      <p>Paid subscriptions may be billed monthly or yearly.</p>
+      <p>Access to premium features depends on the selected plan.</p>
     </Section>
 
-    <Section title="8. Cancellation and Refunds">
-      <p>Customers may cancel subscriptions in accordance with the Projina Cancellation Policy. Cancellation generally prevents future renewal but does not automatically entitle the Customer to a refund for the current billing period.</p>
-      <p>Refunds are handled in accordance with the Projina Refund Policy and applicable law.</p>
+    <Section title="6. Billing and Payments">
+      <p>Payments may be made through available payment methods including:</p>
+      <List items={["Mobile Money", "Bank Transfer"]} />
+      <p>Subscription fees must be paid in advance according to the selected billing cycle.</p>
+      <p>Failure to make payment may result in suspension of premium features.</p>
     </Section>
 
-    <Section title="9. Suspension and Termination">
-      <p>Crestlancing may suspend or restrict access to the Services where reasonably necessary to protect the platform and enforce these Terms.</p>
-      <p>Where reasonably practicable, Crestlancing may provide notice and an opportunity to address the relevant issue before termination.</p>
+    <Section title="7. Subscription Cancellation">
+      <p>Users may cancel their subscription at any time.</p>
+      <p>When a subscription is canceled, access to premium features will continue until the end of the current billing period.</p>
+      <p>After the billing period ends, the account may revert to the free plan if available.</p>
     </Section>
 
-    <Section title="10. Contact Information">
-      <p>For questions regarding these Terms and Conditions, please contact:</p>
-      <p><strong>Crestlancing Ltd</strong><br /><strong>Projina</strong><br />Website: <strong>https://crms.projina.top</strong><br />Email: <strong>info@projina.com</strong><br />Address: <strong>Yaounde, Cameroon</strong></p>
+    <Section title="8. Platform Availability">
+      <p>Crestlancing strives to ensure that Projina operates smoothly and reliably. However, the platform may occasionally experience downtime due to:</p>
+      <List items={[
+        "System maintenance",
+        "Updates",
+        "Technical issues",
+        "External service disruptions",
+      ]} />
+      <p>Crestlancing does not guarantee uninterrupted service availability.</p>
+    </Section>
+
+    <Section title="9. Data Responsibility">
+      <p>Users are responsible for the data they upload or share on the platform. Although Projina maintains systems to protect data, users are encouraged to maintain backups of important information. Crestlancing shall not be liable for any loss of data resulting from technical failures or user actions.</p>
+    </Section>
+
+    <Section title="10. Intellectual Property">
+      <p>All intellectual property rights related to Projina, including its software, design, branding, and functionality, remain the property of Crestlancing. Users may not copy, reproduce, or distribute any part of the platform without permission.</p>
+    </Section>
+
+    <Section title="11. Termination of Accounts">
+      <p>Crestlancing may suspend or terminate user accounts if:</p>
+      <List items={[
+        "These Terms are violated",
+        "The platform is used illegally",
+        "Security risks are detected",
+      ]} />
+      <p>Company administrators may also remove users from their organization workspace.</p>
+    </Section>
+
+    <Section title="12. Changes to the Terms">
+      <p>Crestlancing may update these Terms and Conditions from time to time. Users will be notified of significant updates through the platform or website. Continued use of the platform after changes means acceptance of the updated terms.</p>
+    </Section>
+
+    <Section title="13. Governing Law">
+      <p>These Terms and Conditions are governed by the laws of Cameroon.</p>
     </Section>
   </div>
 );
@@ -152,75 +186,54 @@ const TermsContent = () => (
 const PrivacyContent = () => (
   <div className="legal-page-content">
     <div className="legal-intro">
-      <p>
-        Crestlancing Ltd respects the privacy of individuals who use Projina. This Privacy Policy explains what personal data
-        we may collect, how we use it, how we protect it, when we may share it, and how you may exercise applicable privacy rights.
-      </p>
-      <p>This Privacy Policy applies to personal data processed through the Projina website, web application, accounts, Workspaces, and related Services.</p>
+      <p>Crestlancing respects your privacy and is committed to protecting the personal information of Projina users. This Privacy Policy explains how we collect, use, and protect your information when you use Projina.</p>
     </div>
 
-    <Section title="1. Introduction">
-      <p>By using Projina, you acknowledge that your personal data may be processed as described in this Privacy Policy.</p>
-      <p>Where Projina is used by an Organization, certain personal data may be provided by or managed on behalf of that Organization.</p>
-      <p>This Privacy Policy should be read together with the Projina Terms and Conditions.</p>
+    <Section title="1. Information We Collect">
+      <p>Projina may collect the following information:</p>
+      <p><strong>User Information</strong></p>
+      <List items={["Name", "Work email address", "Role within the company (optional)"]} />
+      <p><strong>Company Information</strong></p>
+      <List items={["Company name", "Address", "Industry", "Company logo"]} />
+      <p><strong>Platform Data</strong></p>
+      <List items={["Project information", "Task details", "Uploaded files", "Workspace data"]} />
     </Section>
 
-    <Section title="2. Who We Are">
-      <p>The entity responsible for operating Projina is:</p>
-      <p><strong>Crestlancing Ltd</strong><br />Website: <strong>https://crms.projina.top</strong><br />Email: <strong>info@projina.com</strong><br />Address: <strong>Yaounde, Cameroon</strong></p>
-    </Section>
-
-    <Section title="3. Information We Collect">
-      <p>Depending on how you use Projina, we may collect the following categories of information:</p>
+    <Section title="2. How We Use Your Information">
+      <p>We use collected data to:</p>
       <List items={[
-        "Account information: name, work email address, role, and login data;",
-        "Organization information: name, business details, address, and workspace information;",
-        "Workspace information: project names, tasks, comments, deadlines, files, and messages;",
-        "Technical information: device, browser, operating system, IP address, logs, and access times;",
-        "Subscription and transaction information: billing status, plan details, and payment-related records;",
-        "Support information: information you provide when contacting support or communicating with Crestlancing.",
+        "Provide access to the platform",
+        "Manage company workspaces",
+        "Enable collaboration between team members",
+        "Improve platform performance",
+        "Maintain system security",
       ]} />
+      <p>User and company data are stored solely for the purpose of operating the Projina platform.</p>
     </Section>
 
-    <Section title="4. How We Use Personal Data">
-      <p>We may use personal data to:</p>
-      <List items={[
-        "create and administer accounts;",
-        "provide and operate Projina;",
-        "manage Workspaces, projects, and user permissions;",
-        "process subscriptions and payments;",
-        "provide customer support;",
-        "maintain platform security;",
-        "detect and prevent fraud, abuse, or unauthorized access;",
-        "improve and develop Projina;",
-        "communicate important service information; and",
-        "comply with applicable legal obligations.",
-      ]} />
+    <Section title="3. Cookies">
+      <p>Projina uses cookies to improve user experience.</p>
+      <p>Cookies help us:</p>
+      <List items={["Maintain login sessions", "Improve platform performance", "Remember user preferences"]} />
+      <p>Users may disable cookies in their browser settings, but some platform features may not function properly.</p>
     </Section>
 
-    <Section title="5. Data Sharing and Disclosure">
-      <p>Crestlancing does not sell or rent personal data to third parties for their independent commercial use.</p>
-      <p>Personal data may be shared where reasonably necessary with hosting providers, payment processors, authentication providers, support vendors, security providers, professional advisers, or public authorities where required by law.</p>
+    <Section title="4. Data Sharing">
+      <p>Projina does not sell or rent user data.</p>
+      <p>Information may only be shared when necessary to:</p>
+      <List items={["Operate the platform", "Comply with legal obligations", "Protect the security of the system"]} />
     </Section>
 
-    <Section title="6. Cookies and Similar Technologies">
-      <p>Projina may use cookies and similar technologies for purposes such as maintaining login sessions, remembering preferences, supporting security, understanding platform performance, and improving the user experience.</p>
-      <p>Where applicable, users may manage certain cookie preferences through their browser or available Projina settings.</p>
+    <Section title="5. Data Security">
+      <p>Crestlancing implements reasonable security measures to protect user data from unauthorized access, loss, or misuse. However, no system can guarantee absolute security.</p>
     </Section>
 
-    <Section title="7. Data Security">
-      <p>Crestlancing uses reasonable technical and organizational measures designed to protect personal data against unauthorized access, alteration, disclosure, loss, misuse, or destruction.</p>
-      <p>No online system can be guaranteed to be completely secure, but we take commercially reasonable steps to protect information and respond to incidents.</p>
+    <Section title="6. Account Deletion">
+      <p>User accounts may only be deleted by the company administrator of the workspace. If an organization chooses to remove a user, their access to the platform will be revoked.</p>
     </Section>
 
-    <Section title="8. Data Subject Rights">
-      <p>Subject to applicable law and any lawful limitations, individuals may have rights concerning their personal data, which may include the right to request access, correction, deletion, or objection to certain processing.</p>
-      <p>Requests may require reasonable identity verification. To exercise an applicable privacy right, contact <strong>info@projina.com</strong>.</p>
-    </Section>
-
-    <Section title="9. Contact Us">
-      <p>For privacy questions, requests, or concerns, contact:</p>
-      <p><strong>Crestlancing Ltd</strong><br /><strong>Projina</strong><br />Website: <strong>https://crms.projina.top</strong><br />Privacy Email: <strong>info@projina.com</strong><br />Address: <strong>Yaounde, Cameroon</strong></p>
+    <Section title="7. Policy Updates">
+      <p>This Privacy Policy may be updated periodically to reflect improvements to the platform or changes in legal requirements. Users will be notified of major changes.</p>
     </Section>
   </div>
 );
@@ -228,59 +241,33 @@ const PrivacyContent = () => (
 const RefundContent = () => (
   <div className="legal-page-content">
     <div className="legal-intro">
-      <p>
-        Projina offers subscription plans and related services to organizations, businesses, teams, and other users. This
-        Refund Policy explains when payments made for Projina services may be eligible for a refund and how refund requests are handled.
-      </p>
-      <p>This Refund Policy forms part of the Projina Terms and Conditions. By purchasing or using a paid Projina subscription, you acknowledge and agree to this Refund Policy.</p>
+      <p>Projina offers paid subscription plans for organizations and teams.</p>
     </div>
 
-    <Section title="1. Overview">
-      <p>Refunds are considered in accordance with the applicable subscription, the circumstances of the payment, and applicable laws and regulations of the Republic of Cameroon.</p>
-      <p>Our objective is to provide a clear and transparent process for handling legitimate refund requests while taking into account the nature of Projina as a subscription-based digital service.</p>
+    <Section title="1. Refund Eligibility">
+      <p>Customers may request a refund within 30 days (1 month) of a subscription payment. Refund requests must be submitted within this period to be considered.</p>
     </Section>
 
-    <Section title="2. Refund Eligibility">
-      <p>A Customer may request a refund for a paid Projina subscription within <strong>30 days from the date of the relevant payment</strong>.</p>
-      <p>Submitting a refund request does not automatically guarantee a refund. Each request will be reviewed based on the circumstances of the payment, the subscription involved, the extent to which the Services have been used, and applicable legal requirements.</p>
-    </Section>
-
-    <Section title="3. Eligible Refund Situations">
-      <p>A refund may be considered in circumstances including:</p>
+    <Section title="2. Conditions for Refunds">
+      <p>Refunds may be issued under the following circumstances:</p>
       <List items={[
-        "duplicate payments;",
-        "billing or payment errors attributable to Projina;",
-        "accidental payments where the Customer promptly contacts Projina;",
-        "a material problem that prevents reasonable use of the paid Services and cannot reasonably be resolved; or",
-        "other circumstances that Crestlancing determines justify a refund, subject to applicable law.",
+        "Accidental or duplicate payments",
+        "Billing errors",
+        "Service dissatisfaction within the refund period",
       ]} />
+      <p>All refund requests are reviewed by the Projina support team.</p>
+    </Section>
+
+    <Section title="3. Refund Processing">
+      <p>Approved refunds will be processed using the original payment method, when possible. Refund processing times may vary depending on the payment provider.</p>
     </Section>
 
     <Section title="4. Non-Refundable Situations">
-      <p>Except where required by applicable law, a refund may not be available where:</p>
+      <p>Refunds may not be granted if:</p>
       <List items={[
-        "the request is submitted after the applicable refund period;",
-        "the paid Services have been substantially used during the relevant billing period;",
-        "the Customer failed to cancel before a renewal payment was processed;",
-        "access was suspended or terminated because of a violation of the Terms;",
-        "the Customer voluntarily stops using Projina after receiving and using the Services; or",
-        "the payment relates to a service or feature expressly identified as non-refundable before purchase.",
+        "The refund request is made after the 30-day refund period",
+        "The service has been significantly used beyond normal evaluation",
       ]} />
-    </Section>
-
-    <Section title="5. Refund Request Procedure">
-      <p>Refund requests should be submitted through the official Projina support or contact channel.</p>
-      <p>The request should include enough information to identify the transaction, such as the account name, email, date, plan, amount paid, and the reason for the request.</p>
-    </Section>
-
-    <Section title="6. Refund Processing">
-      <p>Approved refunds will normally be initiated using the original payment method where reasonably possible.</p>
-      <p>The time required for funds to reach the Customer may depend on the bank, Mobile Money operator, payment provider, or other financial institution involved.</p>
-    </Section>
-
-    <Section title="7. Contact">
-      <p>For refund requests or questions concerning this Policy:</p>
-      <p><strong>Crestlancing Ltd</strong><br /><strong>Projina</strong><br />Website: <strong>https://crms.projina.top</strong><br />Email: <strong>info@projina.com</strong><br />Address: <strong>Yaounde, Cameroon</strong></p>
     </Section>
   </div>
 );
@@ -288,43 +275,19 @@ const RefundContent = () => (
 const CancellationContent = () => (
   <div className="legal-page-content">
     <div className="legal-intro">
-      <p>
-        This Cancellation Policy explains how Customers may cancel Projina subscriptions, what happens after cancellation,
-        and how access to paid features and Customer Content may be affected.
-      </p>
-      <p>This Policy forms part of the Projina Terms and Conditions.</p>
+      <p>Projina subscriptions may be canceled at any time by the subscribing organization.</p>
     </div>
 
-    <Section title="1. Overview">
-      <p>Customers may cancel their Projina subscription in accordance with this Policy.</p>
-      <p>Cancellation generally prevents the subscription from renewing for a future billing period.</p>
-      <p>Unless otherwise required by applicable law or provided under the Refund Policy, cancellation does not automatically result in a refund of amounts already paid for the current billing period.</p>
+    <Section title="1. Subscription Cancellation">
+      <p>Organizations may cancel their Projina subscription before the next billing cycle. Cancellation will prevent future billing.</p>
     </Section>
 
-    <Section title="2. How to Cancel">
-      <p>Cancellation should be completed through the subscription-management functionality provided by Projina or by contacting the official Projina support channel.</p>
-      <p>Where cancellation is requested through support, Crestlancing may require sufficient information to verify that the request is being made by an authorized person.</p>
+    <Section title="2. Access After Cancellation">
+      <p>After cancellation, users will continue to have access to paid features until the end of the current billing period. Once the billing period expires, the workspace may revert to the free plan if available.</p>
     </Section>
 
-    <Section title="3. Cancellation and Renewal">
-      <p>Where a subscription is cancelled before the next renewal date, future renewal charges should not be applied to that subscription.</p>
-      <p>If a cancellation is made after a renewal payment has already been processed, the payment may be subject to the Refund Policy and applicable law.</p>
-    </Section>
-
-    <Section title="4. Access After Cancellation">
-      <p>Unless otherwise stated, cancellation does not immediately terminate access to paid Services.</p>
-      <p>Paid features generally remain available until the end of the current paid billing period.</p>
-      <p>After the billing period ends, the account may be downgraded to the available free or freemium plan.</p>
-    </Section>
-
-    <Section title="5. Data Retention After Cancellation">
-      <p>After cancellation or account closure, Crestlancing may retain Customer Content and personal data for a limited period where necessary for service administration, security, backup processes, dispute resolution, legal compliance, accounting, fraud prevention, or other purposes permitted by law.</p>
-      <p>The retention period may vary depending on the type of information and applicable requirements.</p>
-    </Section>
-
-    <Section title="6. Contact">
-      <p>For cancellation-related questions or requests:</p>
-      <p><strong>Crestlancing Ltd</strong><br /><strong>Projina</strong><br />Website: <strong>https://crms.projina.top</strong><br />Email: <strong>info@projina.com</strong></p>
+    <Section title="3. Data Access">
+      <p>Organizations may download or export their data before the end of the billing cycle if needed.</p>
     </Section>
   </div>
 );
