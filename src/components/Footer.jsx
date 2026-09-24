@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/footerStyles.css'
 
 import iconWhite from '../assets/icon-white.png'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 /* ── Apple App Store badge ── */
@@ -41,6 +41,8 @@ const PlayStoreBadge = () => (
 
 const Footer = ({ dashboardImage }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const goToLegalPage = (path) => navigate(path, { state: { from: location.pathname } });
 
     return (
         <>
@@ -96,7 +98,10 @@ const Footer = ({ dashboardImage }) => {
                             <li onClick={() => navigate('/')}>Home</li>
                             <li onClick={() => navigate('/#features')}>Features</li>
                             <li onClick={() => navigate('/pricing')}>Plan & Pricing</li>
-                            <li onClick={() => navigate('/terms-and-conditions')}>Terms & Conditions</li>
+                            <li onClick={() => goToLegalPage('/terms-and-conditions')}>Terms & Conditions</li>
+                            <li onClick={() => goToLegalPage('/privacy-policy')}>Privacy Policy</li>
+                            <li onClick={() => goToLegalPage('/refund-policy')}>Refund Policy</li>
+                            <li onClick={() => goToLegalPage('/cancellation-policy')}>Cancellation Policy</li>
                         </ul>
                     </div>
 
@@ -156,8 +161,10 @@ const Footer = ({ dashboardImage }) => {
                 {/* Copyright bar */}
                 <div className="footer-end">
                     <div className="footer-end-left">
-                        <span onClick={() => navigate("/terms-and-conditions")}>Terms & Conditions</span>
-                        <span>Privacy Policy</span>
+                        <span onClick={() => goToLegalPage("/terms-and-conditions")}>Terms & Conditions</span>
+                        <span onClick={() => goToLegalPage("/privacy-policy")}>Privacy Policy</span>
+                        <span onClick={() => goToLegalPage("/refund-policy")}>Refund Policy</span>
+                        <span onClick={() => goToLegalPage("/cancellation-policy")}>Cancellation Policy</span>
                         <span>Legal Notice</span>
                         <span>Cookie Settings</span>
                     </div>

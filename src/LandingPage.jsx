@@ -44,8 +44,8 @@ const LandingPage = () => {
                 </div>
 
                 <div className={styles.moto1}>
-                    <TypingText text="Make Company" speed={100} />
-                    <TypingText text=" Management " speed={100} delay={1200} /><span style={{ color: '#EA5254' }}><TypingText text="Effortless" speed={100} delay={2400} /></span>
+                    <TypingText text="Make Company" speed={135} loop />
+                    <TypingText text=" Management " speed={135} delay={1550} loop /><span style={{ color: '#EA5254' }}><TypingText text="Effortless" speed={135} delay={3100} loop /></span>
                 </div>
 
                 <div className={styles.moto2}>Simplify Operations, Amplify Growth</div>
