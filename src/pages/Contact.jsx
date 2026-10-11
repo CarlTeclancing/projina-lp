@@ -9,6 +9,8 @@ const Contact = () => {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
     const pricingPlan = searchParams.get('plan') || null
+    const [sending, setSending] = useState(false)
+    const [feedback, setFeedback] = useState(null)
     
     // ── Scroll to top on mount ──
     useEffect(() => {
@@ -24,18 +26,33 @@ const Contact = () => {
 
     async function sendMessage(e){
         e.preventDefault()
+        if (sending) return
+        setFeedback(null)
+        setSending(true)
         try{
-            await fetch('http://localhost:5000/v1/api/contact' ,{
+            const apiUrl = import.meta.env.VITE_API_URL?.trim().replace(/\/+$/, '')
+            if (!apiUrl) {
+                throw new Error('The contact form is temporarily unavailable. Please try again later.')
+            }
+            const response = await fetch(`${apiUrl}/v1/api/contact` ,{
                 method:'post',
                 headers:{
                     'content-type':'application/json'
                 },
-                body:JSON.stringify({...info})
+                body:JSON.stringify({...info}),
+                signal: AbortSignal.timeout(15000)
             })
+            if (!response.ok) {
+                throw new Error('Your message could not be sent. Please try again later.')
+            }
+            setFeedback({ type: 'success', message: 'Your message has been sent. Thank you for contacting us.' })
+            setInfo({ name: '', message: '', phone: '', email: '', plan: pricingPlan || '' })
         }
         catch(e){
-            console.log(e.message);
-            
+            setFeedback({ type: 'error', message: e instanceof TypeError || e.name === 'TimeoutError'
+                ? 'Unable to reach our contact service. Please try again later.' : e.message })
+        } finally {
+            setSending(false)
         }
     }
 
@@ -49,7 +66,7 @@ const Contact = () => {
             <div className="contact-bg">
                 <div className="contact-container">
                     <div className="contact-back-btn">
-                        <button style={{border:'solid 1px grey'}} onClick={()=>navigate('/home')}>
+                        <button style={{border:'solid 1px grey'}} onClick={()=>navigate('/')}>
                             {/* <img src={arrowBack} /> */}
                             <span>Back to Home</span>
                         </button>
@@ -92,7 +109,7 @@ const Contact = () => {
 
                             <div>
                                 <span>Email</span>
-                                <input type="text" 
+                                <input type="email"
                                     name="email"
                                     value={info.email}
                                     onChange={handleChange}
@@ -113,8 +130,9 @@ const Contact = () => {
                             </div>
                            
                             <div style={{textAlign:'right'}} className="contact-send-btn">
-                                <button style={{color:'white' ,backgroundColor:'#5B0C4E'}}>Send Message</button>
+                                <button type="submit" disabled={sending} style={{color:'white' ,backgroundColor:'#5B0C4E'}}>{sending ? 'Sending...' : 'Send Message'}</button>
                             </div>
+                            {feedback && <p role={feedback.type === 'error' ? 'alert' : 'status'}>{feedback.message}</p>}
                         </div>
                         </form>
                     </div>

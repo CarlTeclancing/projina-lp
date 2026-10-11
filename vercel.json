@@ -1,9 +1,8 @@
 {
-  "buildCommand": "npm install && npm run build",
+  "framework": "vite",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "public": true,
-  "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
     {
@@ -16,20 +15,11 @@
       ]
     },
     {
-      "source": "/index.html",
+      "source": "/((?!assets/).*)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     }
@@ -37,7 +27,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/index.html"
     }
   ]
 }
