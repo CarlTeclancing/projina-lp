@@ -10,6 +10,7 @@ import sec1Img from './assets/sec1-img.jpg'
 import sec2Img from './assets/sec2-img.jpg'
 import slider1 from './assets/slider1.jpg'
 import slider2 from './assets/slider2.jpg'
+import explainerVideo from './assets/projina_explainer_animation.mp4'
 
 import arrowBack from './assets/arrow-back.png'
 import Services from './components/Services'
@@ -168,7 +169,7 @@ const LandingPage = () => {
                         className={styles.section2Video}
                     >
                         <source
-                            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                            src={explainerVideo}
                             type="video/mp4"
                         />
                         Your browser does not support the video tag.
