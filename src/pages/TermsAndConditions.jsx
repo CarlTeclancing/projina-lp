@@ -3,14 +3,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/termsStyles.css";
 
 const legalRoutes = [
-  { label: "Terms & Conditions", path: "/terms-and-conditions" },
+  { label: "Terms & Conditions", path: "/terms-and-condition" },
   { label: "Privacy Policy", path: "/privacy-policy" },
   { label: "Refund Policy", path: "/refund-policy" },
   { label: "Cancellation Policy", path: "/cancellation-policy" },
 ];
 
 const pageMeta = {
-  "/terms-and-conditions": { title: "Terms & Conditions", effectiveDate: "August 2024" },
+  "/terms-and-condition": { title: "Terms & Conditions", effectiveDate: "August 2024" },
   "/privacy-policy": { title: "Privacy Policy", effectiveDate: "August 2024" },
   "/refund-policy": { title: "Refund Policy", effectiveDate: "August 2024" },
   "/cancellation-policy": { title: "Cancellation Policy", effectiveDate: "August 2024" },
@@ -35,7 +35,7 @@ const TermsAndConditions = () => {
 
   const renderContent = () => {
     switch (currentRoute.path) {
-      case "/terms-and-conditions":
+      case "/terms-and-condition":
         return <TermsContent />;
       case "/privacy-policy":
         return <PrivacyContent />;
@@ -57,8 +57,8 @@ const TermsAndConditions = () => {
       <article className="legal-document-card">
         <header className="legal-document-header">
           <p className="legal-kicker">Legal</p>
-          <h1>{pageMeta[currentRoute.path]?.title || pageMeta["/terms-and-conditions"].title}</h1>
-          <p className="legal-effective">Effective date: {pageMeta[currentRoute.path]?.effectiveDate || pageMeta["/terms-and-conditions"].effectiveDate}</p>
+          <h1>{pageMeta[currentRoute.path]?.title || pageMeta["/terms-and-condition"].title}</h1>
+          <p className="legal-effective">Effective date: {pageMeta[currentRoute.path]?.effectiveDate || pageMeta["/terms-and-condition"].effectiveDate}</p>
         </header>
 
         <div className="legal-document-body">

@@ -31,7 +31,7 @@ function App() {
           <Route path='/business' element={<Business/>} />
         </Route>
         <Route path='/contact-us' element={<Contact/>} />
-        <Route path='/terms-and-conditions' element={<TermsAndConditions/>}/>
+        <Route path='/terms-and-condition' element={<TermsAndConditions/>}/>
         <Route path='/privacy-policy' element={<TermsAndConditions/>}/>
         <Route path='/refund-policy' element={<TermsAndConditions/>}/>
         <Route path='/cancellation-policy' element={<TermsAndConditions/>}/>

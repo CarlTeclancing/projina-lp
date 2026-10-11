@@ -98,7 +98,7 @@ const Footer = ({ dashboardImage }) => {
                             <li onClick={() => navigate('/')}>Home</li>
                             <li onClick={() => navigate('/#features')}>Features</li>
                             <li onClick={() => navigate('/pricing')}>Plan & Pricing</li>
-                            <li onClick={() => goToLegalPage('/terms-and-conditions')}>Terms & Conditions</li>
+                            <li onClick={() => goToLegalPage('/terms-and-condition')}>Terms & Conditions</li>
                             <li onClick={() => goToLegalPage('/privacy-policy')}>Privacy Policy</li>
                             <li onClick={() => goToLegalPage('/refund-policy')}>Refund Policy</li>
                             <li onClick={() => goToLegalPage('/cancellation-policy')}>Cancellation Policy</li>
@@ -161,7 +161,7 @@ const Footer = ({ dashboardImage }) => {
                 {/* Copyright bar */}
                 <div className="footer-end">
                     <div className="footer-end-left">
-                        <span onClick={() => goToLegalPage("/terms-and-conditions")}>Terms & Conditions</span>
+                        <span onClick={() => goToLegalPage("/terms-and-condition")}>Terms & Conditions</span>
                         <span onClick={() => goToLegalPage("/privacy-policy")}>Privacy Policy</span>
                         <span onClick={() => goToLegalPage("/refund-policy")}>Refund Policy</span>
                         <span onClick={() => goToLegalPage("/cancellation-policy")}>Cancellation Policy</span>
