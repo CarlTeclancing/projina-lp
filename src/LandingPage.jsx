@@ -19,6 +19,7 @@ import {
     HiOutlineUserGroup,
     HiOutlineViewBoards,
     HiOutlineCalendar,
+    HiOutlineSparkles,
 } from 'react-icons/hi'
 import { GiTrophy } from 'react-icons/gi'
 
@@ -75,6 +76,10 @@ const LandingPage = () => {
                     <span className={styles.ovals} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
                         <HiOutlineCalendar size={17} style={{ color: '#5B0C4E', flexShrink: 0 }} />
                         Schedule
+                    </span>
+                    <span className={styles.ovals} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                        <HiOutlineSparkles size={17} style={{ color: '#5B0C4E', flexShrink: 0 }} />
+                        AI Assistant
                     </span>
                 </div>
             </div>
@@ -136,6 +141,11 @@ const LandingPage = () => {
                         <h3>Performance & Growth Analytics</h3>
                         <p>Monitor key business metrics to evaluate how projects, teams, and departments
                             are performing. Get actionable insights to drive improvement.</p>
+                    </div>
+                    <div style={{ backgroundColor: 'white', padding: 10, borderRadius: 10 }}>
+                        <h3>AI Assistant</h3>
+                        <p> Get instant answers about your business, generate reports, draft messages, and 
+                            automate daily tasks. work smarter and save hours with intelligent help built directly into projina.</p>
                     </div>
                 </div>
             </div>
